@@ -10,7 +10,8 @@
 	```python
 	def uppercase_error(str):
 	```
-		- This module converts a fully lowercase string into uppercase string but fails if there are any other character
+		- This module converts a fully lowercase string into uppercase string but fails 
+		if there are any other character
 
 * #### Module 3
 	```python
