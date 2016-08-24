@@ -1,4 +1,4 @@
-### Unit test cases
+### Functions tested:
 
 * #### Module 1
 	```python
