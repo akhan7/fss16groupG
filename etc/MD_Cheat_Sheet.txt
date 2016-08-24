@@ -15,7 +15,7 @@ _This will be italic_   - italic
 
 
 Links
-<www.google.com>
+<https://www.google.com>
 
 Inline links
 [Search for it.](www.google.com)
@@ -42,6 +42,11 @@ Unordered list
 * Option2
 - Option3
 
+---
+***
+___
+Horizontal line
+
 Email
 <mns@gmail.com>
 
@@ -49,7 +54,7 @@ Block quote
 > This will appear as a block quote
 
 code
-`var b =21`
+`var b = 21`
 
 code block
 
@@ -59,15 +64,9 @@ public static void main(String [] args){
 }
 ```
 Task lists
-- [x] Selected item
-- [] Unselected item
-- [] Unselected item3
-
-Terminal commands
-```sh
-npm install
-```
-
+- [x] Selected item1
+- [ ] Unselected item2
+- [ ] Unselected item3
 
 Table
 
@@ -76,3 +75,6 @@ Column1 | Column2
 Item 1  | Item 1
 Item 2  | Item 2
 Item 3  | Item 3
+
+
+
