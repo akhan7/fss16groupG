@@ -25,3 +25,7 @@
 	```
 		- This module capitalizes the first character and lowers the case of 
 		other characters. Uses Module 3
+
+#### Screenshot of rerun
+
+![Unable to load image](screenshot1.png)
