@@ -4,6 +4,7 @@ Anh Tuan Nguyen, Tung Thanh Nguyen, Tien N. Nguyen, David Lo, Chengnian Sun. 201
 # Keywords:
 1. Duplicate bug report
 2. Information retrieval
+3. Term frequency- Inverse documents frequency (Tf-Idf)
 
 # Notes:
 1. Motivational Statements:
