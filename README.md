@@ -1,2 +1,14 @@
 # fss16groupG
-This repo is for Automated Software Engineering fall 2016
+Group members:
+
+Ahmad Saad Khan
+Neha Kale
+M N Sekharan
+
+# HW1:
+## Read Something
+Reading assignment 1 is [here](https://github.com/akhan7/fss16groupG/blob/master/read/1/README.md)
+
+## Code Something
+Coding assignment 1 is [here](https://github.com/akhan7/fss16groupG/tree/master/code/1)
+
