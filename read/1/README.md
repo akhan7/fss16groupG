@@ -9,8 +9,8 @@ ii4. Topic Model - In machine learning and natural language processing, a topic 
 
 # Notes:
 iii1. Motivational Statements: Among several automated detection approaches, text-based information retrieval (IR) approaches have been shown to outperform others in term of both accuracy and time efficiency. However, those IR-based approaches do not detect well the duplicate reports on the same technical issues written in different descriptive terms.
-iii2. Data: 
-iii3. Related Work
+iii2. Data: The data set has been taken from the references - C. Sun, D. Lo, S.-C. Khoo, and J. Jiang. Towards more accurate retrieval of duplicate bug reports. In ASE’11, pages 253–262. IEEE CS, 2011.
+iii3. Related Work: 
 iii4. 
 
 #Improvements
