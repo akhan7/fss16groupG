@@ -8,4 +8,8 @@ ii3. Term frequency- Inverse documents frequency (Tf-Idf)-In information retriev
 ii4. Topic Model - In machine learning and natural language processing, a topic model is a type of statistical model for discovering the abstract topics that occur in a collection of documents. Topic modeling is a frequently used text-mining tool for discovery of hidden semantic structures in a text body.
 
 # Notes:
-1. Motivational Statements:
+1. Motivational Statements: 
+2. 
+
+#Improvements
+iv1. The author could have added a section of future work so that further work based on their work could be figured out.
