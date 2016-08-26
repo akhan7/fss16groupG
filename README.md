@@ -3,7 +3,7 @@
 
 * Ahmad Saad Khan
 * Neha Kale
-* M N Sekharan
+* Sekharan Natarajan 
 
 # HW1:
 ## Read Something
