@@ -1,9 +1,9 @@
-# fss16groupG
-Group members:
+# Automated Software Engineering Fall 2016 Group G
+## Group members:
 
-Ahmad Saad Khan
-Neha Kale
-M N Sekharan
+* Ahmad Saad Khan
+* Neha Kale
+* M N Sekharan
 
 # HW1:
 ## Read Something
