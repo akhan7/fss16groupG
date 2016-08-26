@@ -16,7 +16,7 @@
 Among several automated detection approaches, text-based information retrieval (IR) approaches have been shown to outperform others in term of both accuracy and time efficiency. However, those IR-based approaches do not detect well the duplicate reports on the same technical issues written in different descriptive terms.
 
 * **iii2. Data:**
-The data set has been taken from the references - C. Sun, D. Lo, S.-C. Khoo, and J. Jiang. Towards more accurate retrieval of duplicate bug reports. In ASE’11, pages 253–262. IEEE CS, 2011.
+The data set has been taken from the references - *C. Sun, D. Lo, S.-C. Khoo, and J. Jiang. Towards more accurate retrieval of duplicate bug reports. In ASE’11, pages 253–262. IEEE CS, 2011.*
 
 * **iii3. Related Work:**
 Similar work has been seen in paper such as - *L. Hiew. Assisted detection of duplicate bug reports.Master’s thesis, University of British Columbia, 2006.* and *A. T. Nguyen, T. T. Nguyen, J. Al-Kofahi, H. V. Nguyen, and T. N. Nguyen. A Topic-based Approach for Narrowing the Search Space of Buggy Files from a Bug Report. In ASE’11, pp. 263-272. IEEE CS, 2011.*
