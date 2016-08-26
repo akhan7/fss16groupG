@@ -4,7 +4,8 @@ Anh Tuan Nguyen, Tung Thanh Nguyen, Tien N. Nguyen, David Lo, Chengnian Sun. 201
 # Keywords:
 ii1. Duplicate bug report: When many developers/testers file a bug report having same technical problems but they use different terminology or styles and write about different phenomenon to write about the same issue(s) that is classified as a duplicate bug report.
 ii2. Information retrieval-Information retrieval (IR) is the activity of obtaining information resources relevant to an information need from a collection of information resources.
-ii3. Term frequency- Inverse documents frequency (Tf-Idf)
+ii3. Term frequency- Inverse documents frequency (Tf-Idf)-In information retrieval term frequency–inverse document frequency is a numerical statistic that is intended to reflect how important a word is to a document in a collection.
+ii4.
 
 # Notes:
 1. Motivational Statements:
