@@ -3,7 +3,11 @@
 
 * Ahmad Saad Khan
 * Neha Kale
-* Sekharan Natarajan 
+* Sekharan Natarajan
+
+# HW2:
+## Active shooter exercise
+Active shooter exercise is [here](https://github.com/akhan7/fss16groupG/blob/master/etc/Active_Shooter.md)
 
 # HW1:
 ## Read Something
