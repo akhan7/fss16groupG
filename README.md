@@ -9,6 +9,9 @@
 ## Active shooter exercise
 Active shooter exercise is [here](https://github.com/akhan7/fss16groupG/blob/master/etc/Active_Shooter.md)
 
+## Code Something
+Coding assignment 2 is [here](https://github.com/akhan7/fss16groupG/tree/master/code/2)
+
 # HW1:
 ## Read Something
 Reading assignment 1 is [here](https://github.com/akhan7/fss16groupG/blob/master/read/1/README.md)
