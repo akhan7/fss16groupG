@@ -12,6 +12,9 @@ Active shooter exercise is [here](https://github.com/akhan7/fss16groupG/blob/mas
 ## Introductory python
 Coding assignment 2 is [here](https://github.com/akhan7/fss16groupG/tree/master/code/2)
 
+## Reading Assignment
+Reading assignment 2 is [here](https://github.com/akhan7/fss16groupG/blob/master/read/2/README.md)
+
 # HW1:
 ## Read Something
 Reading assignment 1 is [here](https://github.com/akhan7/fss16groupG/blob/master/read/1/README.md)
