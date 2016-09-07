@@ -41,9 +41,8 @@ Data (bug reports) have been taken from three popular open source projects - Ecl
 ![Open office](pics/openoffice.png) ![Firefox](pics/firefox.png) ![Eclipse](pics/eclipse.png)|
 
 # Improvements:
-* **iv1.** 
-* **iv2.**  
+* **iv1.** The authors have always used individual words for computing similarity scores. They could have gone a step further and used bigrams and technical phrases for analysis.
+* **iv2.** The authors argue that since the average frequency of new report arrival is around 1 - 1.5 per hour, their system has enough time to retrain and refresh the model. But this might not always be the case especially during the time of new software release where there might be huge influx of bug reports. They could have discussed the criteria they would to update the model in such a case.  
 
-* **iv3.** 
+* **iv3.** Since the model evolves continously with new incoming reports, the time for evolving the model also increases. The authors have mentioned this overhead but could have explained to optimize this case.
 
-* **iv4.** The author could have added a section of future work so that further work based on their work could be figured out.
