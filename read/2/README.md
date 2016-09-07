@@ -30,9 +30,8 @@ Data (bug reports) have been taken from three popular open source projects - Ecl
 Similar work has been seen in paper such as - *L. Hiew. Assisted detection of duplicate bug reports.Master’s thesis, University of British Columbia, 2006.* and *A. T. Nguyen, T. T. Nguyen, J. Al-Kofahi, H. V. Nguyen, and T. N. Nguyen. A Topic-based Approach for Narrowing the Search Space of Buggy Files from a Bug Report. In ASE’11, pp. 263-272. IEEE CS, 2011.*
 
 * **iii4. Baseline results:** The following figure shows the results of this discriminative model based approach on the three datasets over seven runs compared to earlier methods.
-![Open office](pics/openoffice.png)
-![Firefox](pics/firefox.png)
-![Eclipse](pics/eclipse.png)
+
+![Open office](pics/openoffice.png) ![Firefox](pics/firefox.png) ![Eclipse](pics/eclipse.png)|
 
 # Improvements:
 * **iv1.** DBTM is shown to perform well with bug reports have reasonably large number of topics `(k > 60)`. Those type of bug reports are obviously more complex and hence the chances of it being detected by developers and testers is less. On the other hand, more bug reports would be submitted for the bug that is more common and less complex and hence will have lesser number of topics. The paper has not given equal importance to reports with reasonably lesser number of features (20-40).
