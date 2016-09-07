@@ -1,14 +1,14 @@
 # Paper Title:
-*A Discriminative Model Approach for Accurate Duplicate Bug Report Retrieval * 
+*A Discriminative Model Approach for Accurate Duplicate Bug Report Retrieval* 
 (ICSE '10 Proceedings of the 32nd ACM/IEEE International Conference on Software Engineering - Volume 1)
 
 
 # Keywords:
 * **ii1. Tokenization**: Tokenization is the process of parsing a character stream into a sequence of word tokens by splitting the stream by the de-limiters. Tokenization is one of the important pre processing tasks in Information retrieval process.
 
-* **ii2. Information retrieval (IR)** is the activity of obtaining information resources relevant to an information need from a collection of information resources.
+* **ii2. Support Vector Machine (SVM)**: It is an approach to build-ing a discriminative model or classifier based on a set of labeled vectors. Given a set of vectors, some belonging to a positive class and others belonging to a negative class, SVM tries to build a hyperplane that separates vectors belonging to the positive class from those of the negative class with the largest margin.
 
-* **ii3. Term frequency- Inverse documents frequency (Tf-Idf)**-In information retrieval term frequency–inverse document frequency is a numerical statistic that is intended to reflect how important a word is to a document in a collection.
+* **ii3. Recall rate**: Recall rate is defined as the ratio of number of duplicate reports whose masters are successfully detected to the total number of duplicate reports for testing the retrieval process. In other words it gives the percentage of duplicates whose masters are successfully retreived in the list.
 
 * **ii4. Topic Model** - In machine learning and natural language processing, a topic model is a type of statistical model for discovering the abstract topics that occur in a collection of documents. Topic modeling is a frequently used text-mining tool for discovery of hidden semantic structures in a text body.
 
@@ -17,7 +17,14 @@
 Among several automated detection approaches, text-based information retrieval (IR) approaches have been shown to outperform others in term of both accuracy and time efficiency. However, those IR-based approaches do not detect well the duplicate reports on the same technical issues written in different descriptive terms.
 
 * **iii2. Data:**
-The data set has been taken from the references - *C. Sun, D. Lo, S.-C. Khoo, and J. Jiang. Towards more accurate retrieval of duplicate bug reports. In ASE’11, pages 253–262. IEEE CS, 2011.*
+Data (bug reports) have been taken from three popular open source projects - Eclipse (IDE), Firefox (Web browser) and OpenOffice (Office Suite). These sources were chosen because they were large software project with big bug repositories and they were all written in different languages so that a generalised result can be found.
+
+
+| Dataset | Time Frame | Training Reports (Duplicate/All) | sting Reports(Duplicate/All)| 
+----------|------------|----------------------------------|-----------------------------|
+|OpenOffice |Jan/02/2008–Dec/30/2008|100/3160|529/9572 |
+|Firefox|Apr/04/2002–Jul/07/2007|100/962|3207/46359 |
+|Eclipse |Jan/02/2008–Dec/30/2008|100/4265|1913/40387 |
 
 * **iii3. Related Work:**
 Similar work has been seen in paper such as - *L. Hiew. Assisted detection of duplicate bug reports.Master’s thesis, University of British Columbia, 2006.* and *A. T. Nguyen, T. T. Nguyen, J. Al-Kofahi, H. V. Nguyen, and T. N. Nguyen. A Topic-based Approach for Narrowing the Search Space of Buggy Files from a Bug Report. In ASE’11, pp. 263-272. IEEE CS, 2011.*
