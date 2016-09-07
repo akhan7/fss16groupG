@@ -20,11 +20,11 @@ Among several automated detection approaches, text-based information retrieval (
 Data (bug reports) have been taken from three popular open source projects - Eclipse (IDE), Firefox (Web browser) and OpenOffice (Office Suite). These sources were chosen because they were large software project with big bug repositories and they were all written in different languages so that a generalised result can be found.
 
 
-| Dataset | Time Frame | Training Reports (Duplicate/All) | sting Reports(Duplicate/All)| 
-----------|------------|----------------------------------|-----------------------------|
-|OpenOffice |Jan/02/2008–Dec/30/2008|100/3160|529/9572 |
-|Firefox|Apr/04/2002–Jul/07/2007|100/962|3207/46359 |
-|Eclipse |Jan/02/2008–Dec/30/2008|100/4265|1913/40387 |
+  | Dataset | Time Frame | Training Reports (Duplicate/All) | sting Reports(Duplicate/All)| 
+  ----------|------------|----------------------------------|-----------------------------|
+  |OpenOffice |Jan/02/2008–Dec/30/2008|100/3160|529/9572 |
+  |Firefox|Apr/04/2002–Jul/07/2007|100/962|3207/46359 |
+  |Eclipse |Jan/02/2008–Dec/30/2008|100/4265|1913/40387 |
 
 * **iii3. Related Work:**
 Similar work has been seen in paper such as - *L. Hiew. Assisted detection of duplicate bug reports.Master’s thesis, University of British Columbia, 2006.* and *A. T. Nguyen, T. T. Nguyen, J. Al-Kofahi, H. V. Nguyen, and T. N. Nguyen. A Topic-based Approach for Narrowing the Search Space of Buggy Files from a Bug Report. In ASE’11, pp. 263-272. IEEE CS, 2011.*
