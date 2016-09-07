@@ -10,7 +10,7 @@
 
 * **ii3. Recall rate**: Recall rate is defined as the ratio of number of duplicate reports whose masters are successfully detected to the total number of duplicate reports for testing the retrieval process. In other words it gives the percentage of duplicates whose masters are successfully retreived in the list.
 
-* **ii4. Topic Model** - In machine learning and natural language processing, a topic model is a type of statistical model for discovering the abstract topics that occur in a collection of documents. Topic modeling is a frequently used text-mining tool for discovery of hidden semantic structures in a text body.
+* **ii4. Feature Engineering** - Feature engineering is a process of using domain knowledge of the data to create, extract features that makes machine learning algorithm work.
 
 # Notes:
 * **iii1. Motivational Statements:**
