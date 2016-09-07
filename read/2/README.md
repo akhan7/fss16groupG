@@ -38,7 +38,7 @@ Data (bug reports) have been taken from three popular open source projects - Ecl
 
 * **iii4. Baseline results**: The following figure shows the results of this discriminative model based approach on the three datasets over seven runs compared to earlier methods.
 
-![Open office](pics/openoffice.png) ![Firefox](pics/firefox.png) ![Eclipse](pics/eclipse.png)|
+![Open office](pics/openoffice.png) ![Firefox](pics/firefox.png) ![Eclipse](pics/eclipse.png)
 
 # Improvements:
 * **iv1.** The authors have always used individual words for computing similarity scores. They could have gone a step further and used bigrams and technical phrases for analysis.
