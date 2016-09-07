@@ -10,13 +10,14 @@
 
 * **ii3. Recall rate**: Recall rate is defined as the ratio of number of duplicate reports whose masters are successfully detected to the total number of duplicate reports for testing the retrieval process. In other words it gives the percentage of duplicates whose masters are successfully retreived in the list.
 
-* **ii4. Feature Engineering** - Feature engineering is a process of using domain knowledge of the data to create, extract features that makes machine learning algorithm work.
+* **ii4. Feature Engineering**: Feature engineering is a process of using domain knowledge of the data to create, extract features that makes machine learning algorithm work.
 
 # Notes:
-* **iii1. Motivational Statements:**
-Among several automated detection approaches, text-based information retrieval (IR) approaches have been shown to outperform others in term of both accuracy and time efficiency. However, those IR-based approaches do not detect well the duplicate reports on the same technical issues written in different descriptive terms.
+* **iii1. Motivational Statements**:
+Previous approaches that are used to find duplicate bugs were based on similarity score of vector space representation.
+There is still much room for improvement in terms of accuracy of duplicate detection process. In this paper discriminative models for information retrieval are built to detect duplicate bug reports more accurately which the authors claim would improve duplicate bug detection accuracy by 43%
 
-* **iii2. Data:**
+* **iii2. Data**:
 Data (bug reports) have been taken from three popular open source projects - Eclipse (IDE), Firefox (Web browser) and OpenOffice (Office Suite). These sources were chosen because they were large software projects with big bug repositories and they were all written in different languages so that a generalised result can be found.
 
 
@@ -26,18 +27,23 @@ Data (bug reports) have been taken from three popular open source projects - Ecl
   |Firefox|Apr/04/2002–Jul/07/2007|100/962|3207/46359 |
   |Eclipse |Jan/02/2008–Dec/30/2008|100/4265|1913/40387 |
 
-* **iii3. Related Work:**
-Similar work has been seen in paper such as - *L. Hiew. Assisted detection of duplicate bug reports.Master’s thesis, University of British Columbia, 2006.* and *A. T. Nguyen, T. T. Nguyen, J. Al-Kofahi, H. V. Nguyen, and T. N. Nguyen. A Topic-based Approach for Narrowing the Search Space of Buggy Files from a Bug Report. In ASE’11, pp. 263-272. IEEE CS, 2011.*
+* **iii3. Related Work**:
+  1. One of the pioneer studies on duplicate bug report detec-tion is by Runeson et al. Their approach first cleaned the textual bug reports via natural language processing tech-niques – tokenization, stemming and stop word removal. 
+    *P. Runeson, M. Alexandersson, and O. Nyholm. Detection of Duplicate Defect Reports Using Natural Language Processing. Inproceedings of the International Conference on Software Engineering, 2007.*
+    
+  2. Wang et al. extended the work by Runeson et al. in two dimensions.
+    *X. Wang, L. Zhang, T. Xie, J. Anvik, and J. Sun. An Approach to Detecting Duplicate Bug Reports using Natural Language and Execution Information. In proceedings of the International Conference on Software Engineering, 2008.*
 
-* **iii4. Baseline results:** The following figure shows the results of this discriminative model based approach on the three datasets over seven runs compared to earlier methods.
+  3. Besides the effort on duplicate bug report detection, there has also been effort on bug report mining. Anvik et al and Cubranic and Murphy and Lucca all proposed semi-automatic techniques to categorize bug reports.
+
+* **iii4. Baseline results**: The following figure shows the results of this discriminative model based approach on the three datasets over seven runs compared to earlier methods.
 
 ![Open office](pics/openoffice.png) ![Firefox](pics/firefox.png) ![Eclipse](pics/eclipse.png)|
 
 # Improvements:
-* **iv1.** DBTM is shown to perform well with bug reports have reasonably large number of topics `(k > 60)`. Those type of bug reports are obviously more complex and hence the chances of it being detected by developers and testers is less. On the other hand, more bug reports would be submitted for the bug that is more common and less complex and hence will have lesser number of topics. The paper has not given equal importance to reports with reasonably lesser number of features (20-40).
+* **iv1.** 
+* **iv2.**  
 
-* **iv2.**  Experiments were run on open source projects like `OpenOffice, Eclipse and Mozilla`. These projects are well maintained and used by power users and developers which might not always be the case with other software which are meant for the masses (especially those that have public beta testing programs that allow common users to send bug reposts)
-
-* **iv3.** Many open source projects are contributed by people all around the world who might use different languages. The `effect of NLP and translation` before applying the algorithms could have been discussed a bit more. 
+* **iv3.** 
 
 * **iv4.** The author could have added a section of future work so that further work based on their work could be figured out.
