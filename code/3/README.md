@@ -19,7 +19,19 @@ Output:
 -----------
 
 ## Birthday Paradox 
+```python
+def has_duplicate(lst):
+    collectlst = Counter(lst)
+    for i in collectlst:
+        if collectlst[i] > 1:
+            return True
+    return False
 
+```
+
+Output
+ ![](./BirthdayParadox/output/birthday1.png)
+ ![](./BirthdayParadox/output/birthday2.png)
 
 
 -----------------
