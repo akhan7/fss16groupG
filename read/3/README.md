@@ -13,13 +13,16 @@
 * 
 
 # Notes:
+* **iii1. Motivational Statements: 
 | **Bug Report #50900** |
 |-----------------------|
 | **Summary:** Error saving state returned from update of external object; incoming sync will not be triggered. |
 | **Description:** This showed up in the server log. It’s not clear which interop component this belongs to so I just picked one of them. Seems like the code run in this scheduled task should be able to properly handle a stale data by refetching/retrying. |
+**Fig 1:** Bug report #50900
 
-| **InteropService.java**
-// Implementation of the Interop service interface. // Fetch the latest state of the proxy
+
+| **InteropService.java** |
+|// Implementation of the Interop service interface. // Fetch the latest state of the proxy
 // Fetch the latest state of the sync rule
 // Only return data from last synchronized state
 // If there is a project area associated with the sync rule,
@@ -32,8 +35,10 @@
 // return an instance of the process server service...
 // Do incoming synchronization of one state of an item.
 **public** IExternalProxy processIncoming (IExternalProxyHandle ...) {.......} |
+**Fig 2:** Source file InteropService.java
 
-* **iii1. Motivational Statements: 
+Figures 1 and 2 display bug report #50900 and the corresponding fixed/buggy file InteropService.java (for brevity, only comments are shown in Figure 2). The report is about a software defect in which incoming synchronization tasks were not triggered properly in a server. We found that the developers fixed the bug at a single file InteropService.java by adding code into two methods processIncoming and processIncomingOneState to handle a stale data by refetching. As shown, both bug report #50900 and the buggy file InteropService.java describe the same problematic functionality of the system: the “synchronization” of “incoming data” in the interop service. This faulty techni- cal aspect (was described and) could be recognized via the relevant terms, such as sync, synchronization, incoming, interop, state, schedule, etc. Considering the bug report and the source file as textual documents, we could consider this technical aspect as one of their topics. This example suggests that the bug report and the corresponding buggy source files share the common buggy technical topic(s). Thus, detecting the common technical topic(s) between a bug report and a source file could help in bug file localization.
+
 * **iii1.  Related Work: In related work to BugScout they directly applied LDA analysis on bug reports and files to localize the buggy files.
 
 * **iii2. Data sets : Data sets from different software projects including Jazz (a development framework from IBM), Eclipse (an integrated development environment), AspectJ, and ArgoUML, have been included.
