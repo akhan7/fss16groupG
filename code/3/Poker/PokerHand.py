@@ -12,7 +12,7 @@ import copy
 
 class PokerHand(Hand):
     labels = ['straightflush', 'fourkind', 'fullhouse', 'flush',
-              'straight', 'threekind', 'twopair', 'pair']
+              'straight', 'threekind', 'twopair', 'pair', 'nopair']
 
     def rank_card_mapper(self):
         self.rank_card_map = {}
@@ -76,7 +76,7 @@ class PokerHand(Hand):
 
     def has_straight(self):
         self.rank_hist()
-        print self.ranks
+        # print self.ranks
 
         for iind in range(1, 11):
             found = True
@@ -106,15 +106,15 @@ class PokerHand(Hand):
         return False;
 
     def has_fullhouse(self):
-        self.rank_hist();
+        self.rank_hist()
 
         two_found = False
         three_found = False
         for val in self.ranks.values():
-            if val >= 2:
-                two_found = True
-            elif val >= 3:
+            if val >= 3:
                 three_found = True
+            elif val >= 2:
+                two_found = True
 
         return two_found and three_found
 
@@ -151,7 +151,7 @@ class PokerHand(Hand):
 
                 if found:
                     rank_list = range(iind, jind + iind + 1)
-                    print rank_list
+                    # print rank_list
                     for suit in range(0, len(Card.suit_names)):
                         if self.belong_to_same_suit(rank_list, suit):
                             return True
@@ -170,7 +170,7 @@ class PokerHand(Hand):
                     rank_list = range(iind, jind + iind + 1)
                     rank_list.append(1)
 
-                    print rank_list
+                    # print rank_list
                     for suit in range(0, len(Card.suit_names)):
                         if self.belong_to_same_suit(rank_list, suit):
                             return True
@@ -179,56 +179,53 @@ class PokerHand(Hand):
                 else:
                     iind += (jind + 1)
 
-        return False;
+        return found;
 
     def classify(self):
-        index = -1
         if self.has_straightflush():
-            index += 1
-            return PokerHand.labels[index]
+            return PokerHand.labels[0]
         elif self.has_fourkind():
-            index += 1
-            return PokerHand.labels[index]
+            return PokerHand.labels[1]
         elif self.has_fullhouse():
-            index += 1
-            return PokerHand.labels[index]
+            return PokerHand.labels[2]
         elif self.has_flush():
-            index += 1
-            return PokerHand.labels[index]
+            return PokerHand.labels[3]
         elif self.has_straight():
-            index += 1
-            return PokerHand.labels[index]
+            return PokerHand.labels[4]
         elif self.has_threekind():
-            index += 1
-            return PokerHand.labels[index]
+            return PokerHand.labels[5]
         elif self.has_twopair():
-            index += 1
-            return PokerHand.labels[index]
+            return PokerHand.labels[6]
+        elif self.has_pair():
+            return PokerHand.labels[7]
         else:
-            index += 1
-            return PokerHand.labels[index]
+            return PokerHand.labels[8]
+
+    @staticmethod
+    def simulate(trials):
+
+        prob = {}
+        for label in PokerHand.labels:
+            prob[label] = 0
+
+        for i in range(0, trials):
+            deck = Deck()
+            deck.shuffle()
+            for j in range(0, 7):
+                hand = PokerHand()
+                deck.move_cards(hand, 7)
+                hand.sort()
+                print hand
+                classs = hand.classify()
+                print classs
+                prob[classs] = prob.get(classs) + 1
+
+        for label in PokerHand.labels:
+            prob[label] = prob.get(label) / float(trials*7)
+            print "probability of %s is %5.5f " % (label, prob[label])
+
+        return
 
 
 if __name__ == '__main__':
-    # make a deck
-    deck = Deck()
-    deck.shuffle()
-
-    # hand = PokerHand()
-    # deck.move_cards(hand, 10)
-    # hand.sort()
-    # print hand.has_straight()
-    # print hand.has_straightflush()
-
-
-    for i in range(7):
-        hand = PokerHand()
-        deck.move_cards(hand, 7)
-        hand.sort()
-        print hand
-        print "Flush :" + str(hand.has_flush())
-        print "Four kind :" + str(hand.has_fourkind())
-        print "Pair : " + str(hand.has_pair())
-        print "Two Pair : " + str(hand.has_twopair())
-        print "Three kind : " + str(hand.has_threekind())
-        print ''
+    PokerHand.simulate(10000)
