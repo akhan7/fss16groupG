@@ -202,7 +202,7 @@ class PokerHand(Hand):
             return PokerHand.labels[8]
 
     @staticmethod
-    def simulate(trials):
+    def simulate(trials, hands):
 
         prob = {}
         for label in PokerHand.labels:
@@ -211,21 +211,27 @@ class PokerHand(Hand):
         for i in range(0, trials):
             deck = Deck()
             deck.shuffle()
-            for j in range(0, 7):
+            for j in range(0, hands):
                 hand = PokerHand()
-                deck.move_cards(hand, 7)
+                deck.move_cards(hand, int(52 / hands))
                 hand.sort()
-                print hand
+                # print hand
                 classs = hand.classify()
-                print classs
+                # print classs
                 prob[classs] = prob.get(classs) + 1
 
         for label in PokerHand.labels:
-            prob[label] = prob.get(label) / float(trials*7)
+            prob[label] = prob.get(label) / float(trials * hands)
             print "probability of %s is %5.5f " % (label, prob[label])
 
         return
 
 
 if __name__ == '__main__':
-    PokerHand.simulate(10000)
+    print "10000 trials 7 cards / 7 hands"
+    print "=================================="
+    PokerHand.simulate(10000, 7)
+
+    print "\n10000 trials 5 cards / 10 hands"
+    print "=================================="
+    PokerHand.simulate(10000, 10)
