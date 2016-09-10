@@ -1,4 +1,4 @@
-Output:
+## Poker
 
 #### Functions to check the specified type of hand. Implemented inside `class PokerHand`
 ```python
@@ -28,3 +28,6 @@ Output:
 ```python
    def classify(self):
 ```
+
+Output :
+![](./Poker/output/poker_out.png)
