@@ -11,9 +11,8 @@ import copy
 
 
 class PokerHand(Hand):
-
     labels = ['straightflush', 'fourkind', 'fullhouse', 'flush',
-                  'straight', 'threekind', 'twopair', 'pair']
+              'straight', 'threekind', 'twopair', 'pair']
 
     def rank_card_mapper(self):
         self.rank_card_map = {}
@@ -88,8 +87,7 @@ class PokerHand(Hand):
                         found = False
 
                 if found:
-                    # return True
-                    print found, range(iind, iind + jind + 1)
+                    return True
                 else:
                     iind += (jind + 1)
             else:
@@ -101,8 +99,7 @@ class PokerHand(Hand):
                     found = False
 
                 if found:
-                    # return True
-                    print found, range(iind, iind + jind + 1)
+                    return True
                 else:
                     iind += (jind + 1)
 
@@ -154,13 +151,11 @@ class PokerHand(Hand):
 
                 if found:
                     rank_list = range(iind, jind + iind + 1)
+                    print rank_list
                     for suit in range(0, len(Card.suit_names)):
-                        if self.belong_to_same_suit(rank_list,suit):
+                        if self.belong_to_same_suit(rank_list, suit):
                             return True
 
-                    return False
-
-                # print found, iind, iind + jind
                 else:
                     iind += (jind + 1)
             else:
@@ -175,11 +170,11 @@ class PokerHand(Hand):
                     rank_list = range(iind, jind + iind + 1)
                     rank_list.append(1)
 
+                    print rank_list
                     for suit in range(0, len(Card.suit_names)):
-                        if self.belong_to_same_suit(rank_list,suit):
+                        if self.belong_to_same_suit(rank_list, suit):
                             return True
 
-                    return False
 
                 else:
                     iind += (jind + 1)
