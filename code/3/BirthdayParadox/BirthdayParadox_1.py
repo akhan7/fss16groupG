@@ -10,8 +10,6 @@ def has_duplicate(lst):
     for i in collectlst:
         if collectlst[i] > 1:
             return True
-        else:
-            return False
     return False
 
 

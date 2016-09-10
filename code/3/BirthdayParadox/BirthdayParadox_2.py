@@ -8,11 +8,7 @@ def has_duplicate(lst):
         if collectlst[i] > 1:
             # print 'Duplicate items found'
             return True
-        else:
-            # print 'Duplicate items not found'
-            return False
     return False
-
 
 def assign_bday():
     birthday = []
