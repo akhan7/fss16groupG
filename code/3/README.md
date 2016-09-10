@@ -64,6 +64,7 @@ Output
  
 #### Function that simulates hands and calculates probabilities for various hands
  ```python
+    @staticmethod
     def simulate(trials, hands):
 ```
 Output :
