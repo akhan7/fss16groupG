@@ -13,7 +13,7 @@
 * 
 
 # Notes:
-* **iii1. Motivational Statements: 
+* **iii1. Motivational Statements:** 
 | **Bug Report #50900** |
 |-----------------------|
 | **Summary:** Error saving state returned from update of external object; incoming sync will not be triggered. |
