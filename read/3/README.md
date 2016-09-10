@@ -4,24 +4,25 @@
 
 
 # Keywords:
-* **ii1. Defect Localization : Suppose a bug does slip through somehow and it shows up in the Integration Build. If we have made our unit tests fairly small by testing only a single behavior in each, we should be able to pinpoint the bug pretty quickly based on which test is failing. This is one of the big advantages of unit tests over customer tests. The customer tests will tell us that some behavior expected by the customer isn't working. The unit test will tell us why. This phenomena is called as Defect Localization.
+* **ii1. Defect Localization :** Suppose a bug does slip through somehow and it shows up in the Integration Build. If we have made our unit tests fairly small by testing only a single behavior in each, we should be able to pinpoint the bug pretty quickly based on which test is failing. This is one of the big advantages of unit tests over customer tests. The customer tests will tell us that some behavior expected by the customer isn't working. The unit test will tell us why. This phenomena is called as Defect Localization.
 
-* **ii2. Topic Modelling :  a topic model is a type of statistical model for discovering the abstract "topics" that occur in a collection of documents.
+* **ii2. Topic Modelling :**  a topic model is a type of statistical model for discovering the abstract "topics" that occur in a collection of documents.
 
-* **Ii3. LDA : Latent Dirichlet Allocation (LDA)  is a generative, machine learning model, used to model the topics in a collection of textual documents.
+* **Ii3. LDA :** Latent Dirichlet Allocation (LDA)  is a generative, machine learning model, used to model the topics in a collection of textual documents.
 
 * 
 
 # Notes:
 * **iii1. Motivational Statements:** 
-| **Bug Report #50900** |
-|-----------------------|
+| Bug Report #50900 |
+|-------------------|
 | **Summary:** Error saving state returned from update of external object; incoming sync will not be triggered. |
 | **Description:** This showed up in the server log. It’s not clear which interop component this belongs to so I just picked one of them. Seems like the code run in this scheduled task should be able to properly handle a stale data by refetching/retrying. |
 **Fig 1:** Bug report #50900
 
 
-| **InteropService.java** |
+| InteropService.java |
+|---------------------|
 |// Implementation of the Interop service interface. // Fetch the latest state of the proxy
 // Fetch the latest state of the sync rule
 // Only return data from last synchronized state
