@@ -36,7 +36,7 @@ Output
 
 -----------------
 
-## Poker
+## Poker :spades: :hearts: :clubs: :diamonds:
 
 #### Functions to check the specified type of hand. Implemented inside `class PokerHand`
 ```python
