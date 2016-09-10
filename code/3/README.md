@@ -1,3 +1,29 @@
+## Employee
+```python
+class Employee:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def __repr__(self):
+        return 'Name : %s, Age:%s' % (self.name, self.age)
+
+    def __lt__(self, other):
+        return self.age < other.age
+
+
+```
+Output:
+ ![](./Employee/output/employee.png)
+
+-----------
+
+## Birthday Paradox 
+
+
+
+-----------------
+
 ## Poker
 
 #### Functions to check the specified type of hand. Implemented inside `class PokerHand`
