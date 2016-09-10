@@ -64,7 +64,7 @@ Output
  
 #### Function that simulates hands and calculates probabilities for various hands
  ```python
-    def classify(self):
+    def simulate(trials, hands):
 ```
 Output :
  ![](./Poker/output/poker_out.png)
