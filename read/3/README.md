@@ -16,8 +16,8 @@
 * **iii1. Motivational Statements:** 
 | Bug Report #50900 |
 |-------------------|
-| Summary: Error saving state returned from update of external object; incoming sync will not be triggered. |
-| Description: This showed up in the server log. It’s not clear which interop component this belongs to so I just picked one of them. Seems like the code run in this scheduled task should be able to properly handle a stale data by refetching/retrying. |
+| Summary: Error saving state returned from update of external object; incoming sync will not be triggered.
+  Description: This showed up in the server log. It’s not clear which interop component this belongs to so I just picked one of them. Seems like the code run in this scheduled task should be able to properly handle a stale data by refetching/retrying. |
 **Fig 1:** Bug report #50900
 
 
