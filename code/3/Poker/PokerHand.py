@@ -11,6 +11,10 @@ import copy
 
 
 class PokerHand(Hand):
+
+    labels = ['straightflush', 'fourkind', 'fullhouse', 'flush',
+                  'straight', 'threekind', 'twopair', 'pair']
+
     def rank_card_mapper(self):
         self.rank_card_map = {}
         for ind in range(1, 14):
@@ -105,7 +109,17 @@ class PokerHand(Hand):
         return False;
 
     def has_fullhouse(self):
-        return self.has_nkind(2) and self.has_nkind(3)
+        self.rank_hist();
+
+        two_found = False
+        three_found = False
+        for val in self.ranks.values():
+            if val >= 2:
+                two_found = True
+            elif val >= 3:
+                three_found = True
+
+        return two_found and three_found
 
     def has_fourkind(self):
         return self.has_nkind(4)
@@ -172,6 +186,33 @@ class PokerHand(Hand):
 
         return False;
 
+    def classify(self):
+        index = -1
+        if self.has_straightflush():
+            index += 1
+            return PokerHand.labels[index]
+        elif self.has_fourkind():
+            index += 1
+            return PokerHand.labels[index]
+        elif self.has_fullhouse():
+            index += 1
+            return PokerHand.labels[index]
+        elif self.has_flush():
+            index += 1
+            return PokerHand.labels[index]
+        elif self.has_straight():
+            index += 1
+            return PokerHand.labels[index]
+        elif self.has_threekind():
+            index += 1
+            return PokerHand.labels[index]
+        elif self.has_twopair():
+            index += 1
+            return PokerHand.labels[index]
+        else:
+            index += 1
+            return PokerHand.labels[index]
+
 
 if __name__ == '__main__':
     # make a deck
@@ -184,7 +225,7 @@ if __name__ == '__main__':
     # print hand.has_straight()
     # print hand.has_straightflush()
 
-    deal the cards and classify the hands
+
     for i in range(7):
         hand = PokerHand()
         deck.move_cards(hand, 7)
