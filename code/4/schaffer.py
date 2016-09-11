@@ -1,3 +1,9 @@
+import random
+
+SCHAFFER_X_MIN = -100000
+SCHAFFER_X_MAX = 100000
+
+
 def function1(x):
     return x * x
 
@@ -23,11 +29,27 @@ def get_min_max(xmin, xmax):
     return (min_ener, max_ener)
 
 
-def sim_annealing()
+def get_random_min_max(count):
+    ind = 0
+    min_ener = float('inf')
+    max_ener = float('-inf')
+
+    while ind < count:
+        x = random.randint(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
+        curr = schaffer(x)
+        if curr < min_ener:
+            min_ener = curr
+        if curr > max_ener:
+            max_ener = curr
+        ind += 1
+
+    return (min_ener, max_ener)
+
+
+def get_normalizes
+def simulated_annealing()
 
 
 
-print get_min_max(-10000, 10000)
-
-
-
+#print get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
+#print get_random_min_max(100)
