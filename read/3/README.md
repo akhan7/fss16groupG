@@ -39,14 +39,15 @@
 |public IExternalProxy processIncoming (IExternalProxyHandle ...) {.......} |
 **Fig 2:** Source file InteropService.java
 
-* **iii1.  Related Work:** In related work to BugScout they directly applied LDA analysis on bug reports and files to localize the buggy files.
+* **iii2.  Related Work:** A related work to BugScout is from Lukins et al. They directly applied LDA analysis on bug reports and files to localize the buggy files. They perform indexing on all source files with the detected topics from LDA. Then, for a new bug report, a textual query is formed from its description and a search via Vector Space Model (VSM) is performed among such indexed source files. In contrast, BugScout correlates the topics in both source files and bug reports, and uses topics as a random variable in our model. Moreover, their approach does not work well if the code contains few common terms with a new bug report. 
 
-* **iii2. Data sets :** Data sets from different software projects including Jazz (a development framework from IBM), Eclipse (an integrated development environment), AspectJ, and ArgoUML, have been included.
+* **iii3. Data sets:** Data sets from different software projects including Jazz (a development framework from IBM), Eclipse (an integrated development environment), AspectJ, and ArgoUML, have been included.
 
-* 
+* **iii4. Baseline results:** BugScout was created which is an automated approach to localize the buggy files given a bug report. It assumes that the textual contents of a bug report and those of its corresponding source code share some technical aspects of the system. S specialized topic model was developed, that represents the technical aspects in the textual contents of bug reports and source files as topics, and correlates bug reports and buggy files via the shared topics. Empirical results showed that BugScout is accurate in localizing buggy files and outperforms existing approaches.
 
 # Improvements:
 * **iv1.** The authors have always used individual words for computing similarity scores. They could have gone a step further and used bigrams and technical phrases for analysis.
+
 * **iv2.** The authors argue that since the average frequency of new report arrival is around 1 - 1.5 per hour, their system has enough time to retrain and refresh the model. But this might not always be the case especially during the time of new software release where there might be huge influx of bug reports. They could have discussed the criteria they would to update the model in such a case.  
 
 * **iv3.** Since the model evolves continously with new incoming reports, the time for evolving the model also increases. The authors have mentioned this overhead but could have explained to optimize this case.
