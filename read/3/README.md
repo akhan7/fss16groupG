@@ -48,6 +48,6 @@
 # Improvements:
 * **iv1.** The authors have always used individual words for computing similarity scores. They could have gone a step further and used bigrams and technical phrases for analysis.
 
-* **iv2.** The authors argue that since the average frequency of new report arrival is around 1 - 1.5 per hour, their system has enough time to retrain and refresh the model. But this might not always be the case especially during the time of new software release where there might be huge influx of bug reports. They could have discussed the criteria they would to update the model in such a case.  
+* **iv2.** The ranking system of the bug reports is derived from viewing historical data (which source files have had more defects in the past) and shared topics with the new bug report. This system fails to accomodate bug reports pertaining to new source files which might not have been so thoroughly tested and hence might not have numerous bug reports filed but still might be a buggy source file.  
 
-* **iv3.** Since the model evolves continously with new incoming reports, the time for evolving the model also increases. The authors have mentioned this overhead but could have explained to optimize this case.
+* **iv3.** The authors have not made it clear how this model can be improved or optimized. They haven't mentioned any future work which can be put in this model so that it's accuracy or speed can be further increased as compared to previous models. 
