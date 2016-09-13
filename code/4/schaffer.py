@@ -1,4 +1,6 @@
+from __future__ import print_function
 import random
+import math
 
 SCHAFFER_X_MIN = -100000
 SCHAFFER_X_MAX = 100000
@@ -46,10 +48,67 @@ def get_random_min_max(count):
     return (min_ener, max_ener)
 
 
-def get_normalizes
-def simulated_annealing()
+def get_random_neighbor(x):
+    return random.randint(max(SCHAFFER_X_MIN, x - 1000), min(SCHAFFER_X_MAX, x + 1000))
 
 
+def get_energy(min, max, val):
+    return (val - min) / float(max - min)
 
-#print get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
-#print get_random_min_max(100)
+
+def get_prob(e, en, t):
+    return pow(math.e, ((e - en) / t))
+
+
+def simulated_annealing(kmax, emax):
+    random.seed(10)
+    min_ener, max_ener = get_random_min_max(10000)
+
+    print("Simulated min and max energy : ", min_ener, max_ener, end='\n')
+
+    s_init = random.randint(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
+    e_init = get_energy(min_ener, max_ener, schaffer(s_init))
+
+    print("Initial (s , e) ", s_init, e_init, end='\n')
+
+    s_best = s_init
+    e_best = e_init
+
+    k = 1
+
+    while k < kmax and e_init < emax:
+        sn = get_random_neighbor(s_init)
+        en = get_energy(min_ener, max_ener, schaffer(sn))
+
+        if en > e_best:
+            s_best = sn
+            e_best = en
+            print("!", end='')
+
+        if en > e_init:
+            s_init = sn
+            e_init = en
+            print("+", end='')
+
+        elif get_prob(e_init, en, k / float(kmax)) < random.random():
+            s_init = sn
+            e_init = en
+            print("?", end='')
+
+        print(".", end='')
+        k += 1
+
+        if k % 25 == 0:
+            print(s_best, end='\n')
+
+    return s_best
+
+
+# print get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
+print
+get_random_min_max(1000)
+
+print
+"The best attainable solution : " + str(get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)[1])
+
+simulated_annealing(1000, 1)
