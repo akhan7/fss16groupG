@@ -10,7 +10,7 @@
 
 ### Output
 
-![](screenshot/sim500.gif)
+![](screenshot/sim5000.gif)
 ![](screenshot/sim1.png)
 ![](screenshot/sim2.png)
 
