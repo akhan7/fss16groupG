@@ -21,14 +21,18 @@ def schaffer(x):
 def get_min_max(xmin, xmax):
     min_ener = float('inf')
     max_ener = float('-inf')
+    min_x = float('inf')
+    max_x = float('-inf')
     for x in xrange(xmin, xmax):
         curr = schaffer(x)
         if curr < min_ener:
             min_ener = curr
+            min_x = curr
         if curr > max_ener:
             max_ener = curr
+            max_x = curr
 
-    return (min_ener, max_ener)
+    return (min_ener, max_ener, min_x, max_x)
 
 
 def get_random_min_max(count):
@@ -49,7 +53,7 @@ def get_random_min_max(count):
 
 
 def get_random_neighbor(x):
-    return random.randint(max(SCHAFFER_X_MIN, x - 1000), min(SCHAFFER_X_MAX, x + 1000))
+    return random.randint(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
 
 
 def get_energy(min, max, val):
@@ -57,58 +61,56 @@ def get_energy(min, max, val):
 
 
 def get_prob(e, en, t):
-    return pow(math.e, ((e - en) / t))
+    # print(e - en,t,end="\n")
+    return pow(math.e, ((e - en) / 1 - t))
 
 
-def simulated_annealing(kmax, emax):
-    random.seed(10)
+def simulated_annealing(kmax, emin):
+    """"""
     min_ener, max_ener = get_random_min_max(10000)
 
-    print("Simulated min and max energy : ", min_ener, max_ener, end='\n')
+    print("Simulated min and max energy : ", min_ener," , " ,max_ener, end='\n')
+    print("kmax = ", kmax, end="\n")
 
-    s_init = random.randint(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
-    e_init = get_energy(min_ener, max_ener, schaffer(s_init))
+    s = random.randint(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
+    e = get_energy(min_ener, max_ener, schaffer(s))
 
-    print("Initial (s , e) ", s_init, e_init, end='\n')
+    print("Initial (s , e) ", s, e, end='\n')
 
-    s_best = s_init
-    e_best = e_init
+    sb = s
+    eb = e
 
     k = 1
 
-    while k < kmax and e_init < emax:
-        sn = get_random_neighbor(s_init)
+    while k < kmax and eb > emin:
+        sn = get_random_neighbor(s)
         en = get_energy(min_ener, max_ener, schaffer(sn))
 
-        if en > e_best:
-            s_best = sn
-            e_best = en
+        if k == 1 or k % 25 == 0: print("\n,%d, %.2f, " % (k, eb), end="")
+
+        if en < eb:
+            sb = sn
+            eb = en
             print("!", end='')
 
-        if en > e_init:
-            s_init = sn
-            e_init = en
+        if en < e:
+            s = sn
+            e = en
             print("+", end='')
 
-        elif get_prob(e_init, en, k / float(kmax)) < random.random():
-            s_init = sn
-            e_init = en
+        elif get_prob(e, en, k / float(kmax)) < random.random() - k / float(kmax):
+            s = sn
+            e = en
             print("?", end='')
 
         print(".", end='')
         k += 1
 
-        if k % 25 == 0:
-            print(s_best, end='\n')
-
-    return s_best
+    return sb, eb  # print get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
 
 
-# print get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
-print
-get_random_min_max(1000)
+act_min, act_max, min_x, max_x = get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
+x, e = simulated_annealing(1000, 0)
 
-print
-"The best attainable solution : " + str(get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)[1])
-
-simulated_annealing(1000, 1)
+print("\n The best attainable solution : ", act_min / float(act_max), " at ", min_x)
+print("\n The attained solution by simuated annealing : ", e, " at ", x)
