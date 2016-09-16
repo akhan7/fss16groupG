@@ -1,4 +1,4 @@
-#####  Simulated annealer for the Schaffer model.
+#  Simulated annealer for the Schaffer model.
 
 ### Schaffer function
 ![Schaffer](https://wikimedia.org/api/rest_v1/media/math/render/svg/bb422ea9442195156eb1671beb0eb8a7c9b65140)
@@ -7,7 +7,8 @@
 
 ### Interesting reads:
 1. http://www.theprojectspot.com/tutorial-post/simulated-annealing-algorithm-for-beginners/6
-2. 
+2. https://en.wikipedia.org/wiki/Test_functions_for_optimization
+3. https://github.com/txt/ase16/blob/master/doc/hw4.md
 
 
 ### Output
