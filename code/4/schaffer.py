@@ -7,18 +7,22 @@ SCHAFFER_X_MAX = 100000
 
 
 def function1(x):
+    """Generates f1(x)"""
     return x * x
 
 
 def function2(x):
+    """Generates f2(x)"""
     return (x - 2) * (x - 2)
 
 
 def schaffer(x):
+    """Generates schaffer(x)"""
     return function1(x) + function2(x)
 
 
 def get_min_max(xmin, xmax):
+    """Brute force function to find the min and max values possible for schaffer model"""
     min_ener = float('inf')
     max_ener = float('-inf')
     min_x = float('inf')
@@ -36,6 +40,7 @@ def get_min_max(xmin, xmax):
 
 
 def get_random_min_max(count):
+    """Function to get the min and max values from 'count' simulations"""
     ind = 0
     min_ener = float('inf')
     max_ener = float('-inf')
@@ -53,24 +58,27 @@ def get_random_min_max(count):
 
 
 def get_random_neighbor(x):
+    """A naive function to get neighbors. (Here randomly select from search space)"""
     return random.randint(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
 
 
 def get_energy(min, max, val):
+    """Computes normalized energy values"""
     return (val - min) / float(max - min)
 
 
 def get_energy_back(min, max, val):
+    """Converts normalized value to actual value"""
     return val * (max - min) + min
 
 
 def get_prob(e, en, t):
-    # print(e - en,t,end="\n")
+    """Computes acceptance function"""
     return pow(math.e, ((e - en) / 1 - t))
 
 
 def simulated_annealing(kmax, emin):
-    """"""
+    """Simulated annealing for schaffer model"""
     min_ener, max_ener = get_random_min_max(100000)
     s = random.randint(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
     e = get_energy(min_ener, max_ener, schaffer(s))
