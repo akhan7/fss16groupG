@@ -60,6 +60,10 @@ def get_energy(min, max, val):
     return (val - min) / float(max - min)
 
 
+def get_energy_back(min, max, val):
+    return val * (max - min) + min
+
+
 def get_prob(e, en, t):
     # print(e - en,t,end="\n")
     return pow(math.e, ((e - en) / 1 - t))
@@ -67,11 +71,7 @@ def get_prob(e, en, t):
 
 def simulated_annealing(kmax, emin):
     """"""
-    min_ener, max_ener = get_random_min_max(10000)
-
-    print("Simulated min and max energy : ", min_ener," , " ,max_ener, end='\n')
-    print("kmax = ", kmax, end="\n")
-
+    min_ener, max_ener = get_random_min_max(100000)
     s = random.randint(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
     e = get_energy(min_ener, max_ener, schaffer(s))
 
@@ -106,11 +106,15 @@ def simulated_annealing(kmax, emin):
         print(".", end='')
         k += 1
 
-    return sb, eb  # print get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
+    return sb, eb, min_ener, max_ener  # print get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
 
 
+kmax = 5000
 act_min, act_max, min_x, max_x = get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
-x, e = simulated_annealing(1000, 0)
 
-print("\n The best attainable solution : ", act_min / float(act_max), " at ", min_x)
-print("\n The attained solution by simuated annealing : ", e, " at ", x)
+x, e, sim_min, sim_max = simulated_annealing(kmax, 0)
+
+print("\n\nkmax = ", kmax, end="\n")
+print("The best attainable solution : ", act_min, " at ", min_x)
+print("Simulated min and max energy : ", sim_min, " , ", sim_max, end='\n')
+print("The attained solution by simuated annealing : ", get_energy_back(sim_min, sim_max, e), " at ", x)
