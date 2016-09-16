@@ -1,5 +1,21 @@
 ###  Simulated annealer for the Schaffer model.
 
+### Acceptance function
+`exp( (solutionEnergy - neighbourEnergy) / temperature )`
+
+### Interesting reads:
+1. http://www.theprojectspot.com/tutorial-post/simulated-annealing-algorithm-for-beginners/6
+2. 
+
+
+### Output
+
+![](/screenshot/sim500.gif)
+![](/screenshot/sim1.png)
+![](/screenshot/sim2.png)
+
+### Code
+
 ```python
 def simulated_annealing(kmax, emin):
     min_ener, max_ener = get_random_min_max(100000)
@@ -40,21 +56,14 @@ def simulated_annealing(kmax, emin):
     return sb, eb, min_ener, max_ener  # print get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
 ```
 
+
+
 ### Utility functions used
 
 ```python
 def function1(x):
-    return x * x
-
-
 def function2(x):
-    return (x - 2) * (x - 2)
-
-
 def schaffer(x):
-    return function1(x) + function2(x)
-
-
 def get_min_max(xmin, xmax):
 def get_random_min_max(count):
 def get_random_neighbor(x):
