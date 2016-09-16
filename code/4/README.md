@@ -10,9 +10,9 @@
 
 ### Output
 
-![](/screenshot/sim500.gif)
-![](/screenshot/sim1.png)
-![](/screenshot/sim2.png)
+![](screenshot/sim500.gif)
+![](screenshot/sim1.png)
+![](screenshot/sim2.png)
 
 ### Code
 
