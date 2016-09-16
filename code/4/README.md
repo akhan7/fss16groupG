@@ -1,5 +1,7 @@
-###  Simulated annealer for the Schaffer model.
+#####  Simulated annealer for the Schaffer model.
 
+### Schaffer function
+![Schaffer](https://wikimedia.org/api/rest_v1/media/math/render/svg/bb422ea9442195156eb1671beb0eb8a7c9b65140)
 ### Acceptance function
 `exp( (solutionEnergy - neighbourEnergy) / temperature )`
 
