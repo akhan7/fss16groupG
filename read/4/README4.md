@@ -1,7 +1,9 @@
 Paper Title – 
+
 What Makes a Good Bug Report? ,Thomas Zimmermann, Member, IEEE, Rahul Premraj, Nicolas Bettenburg, Member, IEEE,Sascha Just, Member, IEEE, Adrian Schro ̈ter, Member, IEEE, and Cathrin Weiss.
 
 Keywords - 
+
 ii1.Testing and Debugging-
  Software testing is an investigation conducted to provide stakeholders with information about the quality of the product or service under test. Debugging is the process of finding and resolving of defects that prevent correct operation of computer software or a system.
  ii2.Distribution-
@@ -12,6 +14,7 @@ ii4.Human Factors-
  Human factors is the scientific discipline concerned with the understanding of interactions among humans and other elements of a system, and the profession that applies theory, principles, data and methods to design in order to optimize human well-being and overall system performance
 
 Notes-  
+
 iii1. Data Sets – 
 The data set used for this paper can be found on the Computer Society Digital Library at http://doi.ieeecomputersociety.org/10.1109/TSE.2010.63. The authors have considered 2 files. One of them contains raw bug reports rated by developers and reporters. Results obtained from these reports have been used for their experiments. 
 iii2. Related Work –
@@ -28,6 +31,7 @@ lifetimes. (APACHE/ECLIPSE/MOZILLA)
 the chances of it getting fixed. (MOZILLA)
 
 Improvements-
+
 iv1. Lack of sufficient pictorial representation-
  The author should have added more pictorial representations of their survey, experiments and results. This would have made the paper more impactful.
 iv2. Could have added a flow diagram at few places-
