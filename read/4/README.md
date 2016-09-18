@@ -7,7 +7,7 @@
 ####ii1.Testing and Debugging-
  Software testing is an investigation conducted to provide stakeholders with information about the quality of the product or service under test. Debugging is the process of finding and resolving of defects that prevent correct operation of computer software or a system.
  
- ####ii2.Distribution-
+####ii2.Distribution-
  Distribution is the process of making a product or service available for use or consumption by a consumer or business user, using direct means, or using indirect means with intermediaries.
 
 ####ii3.Maintenance and Enhancement-
@@ -28,12 +28,12 @@ The work related to the one explained is by Hooimeijer and Weimer who built a de
  The writers have mentioned that their CUEZILLA can be extended to identify problematic contents such as errors in steps to reproduce and code samples in order to warn the reporter in these situations impact on other research. The writers have made their data and scripts publicly available so that further work can be carried out using it.
 
 ####iii4. Results – 
-Most significant results found by the writers was  
-•	Bug reports containing stack traces get fixed sooner.
+ Most significant results found by the writers was  
+ •	Bug reports containing stack traces get fixed sooner.
 (APACHE/ECLIPSE/MOZILLA)
-•	Bug reports that are easier to read have lower
+ •	Bug reports that are easier to read have lower
 lifetimes. (APACHE/ECLIPSE/MOZILLA)
-•	Including code samples in your bug report increases
+ •	Including code samples in your bug report increases
 the chances of it getting fixed. (MOZILLA)
 
 ###Improvements-
