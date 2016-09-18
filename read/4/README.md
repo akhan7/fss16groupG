@@ -31,8 +31,10 @@ The work related to the one explained is by Hooimeijer and Weimer who built a de
  Most significant results found by the writers was  
 •	Bug reports containing stack traces get fixed sooner.
 (APACHE/ECLIPSE/MOZILLA)
+
 •	Bug reports that are easier to read have lower
 lifetimes. (APACHE/ECLIPSE/MOZILLA)
+
 •	Including code samples in your bug report increases
 the chances of it getting fixed. (MOZILLA)
 
