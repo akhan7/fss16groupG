@@ -2,7 +2,7 @@
 ## Group members:
 
 * :japanese_ogre: Ahmad Saad Khan
-* :information_desk_person: Neha Kale
+* :octocat: Neha Kale
 * :feelsgood: Sekharan Natarajan
 
 | Week  |      Code      |  Read | Add-ons
