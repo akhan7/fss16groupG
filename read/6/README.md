@@ -7,8 +7,11 @@ Christopher S. Corley, Nicholas A. Kraft, Department of Computer Science, The Un
 Keywords: 
 
 ii1. Duplicate bug reports: When many developers/testers file a bug report having same technical problems but they use different terminology or styles and write about different phenomenon to write about the same issue(s) that is classified as a duplicate bug report.
+
 ii2. Topic model: In machine learning and natural language processing, a topic model is a type of statistical model for discovering the abstract "topics" that occur in a collection of documents.
+
 ii3. Machine learning: Machine learning is a subfield of computer science that is closely related to (and often overlaps   with) computational statistics; a discipline which also focuses in prediction-making through the use of computers.
+
 ii4. Deduplication: In computing deduplication is a specialized compression technique for eliminating duplicate copies of repeating data
 
 Notes:
@@ -31,4 +34,5 @@ iv1. The author could maintain a separate section for related work. This could e
 iv2. The author could add a separate section for future work. The author has added future work in the conclusion section. This makes it confusing to understand at times. 
 
 iv3. When the author mentions that their study performs better in terms of some parameters, they could add a few pictorial representation of few of them for better understanding of the reader. 
+
 
