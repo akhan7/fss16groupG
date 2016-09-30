@@ -8,3 +8,11 @@ Duplicate bug reports: When many developers/testers file a bug report having sam
 Topic model: In machine learning and natural language processing, a topic model is a type of statistical model for discovering the abstract "topics" that occur in a collection of documents.
 Machine learning: Machine learning is a subfield of computer science that is closely related to (and often overlaps   with) computational statistics; a discipline which also focuses in prediction-making through the use of computers.
 Deduplication: In computing deduplication is a specialized compression technique for eliminating duplicate copies of repeating data
+
+Notes:
+Data set: The writers have used the data collected by – ‘A. Alipour, A. Hindle, and E. Stroulia. A contextual approach towards more accurate duplicate bug report detection. In Proc. 10th Working Conf. on Mining Software Repositories, pages 183–192, 2013.’. It consists of reports pulled from the android database between November 2007 and September 2012
+Future work: The authors have suggested that a future study which utilizes their metrics in order to find duplicates of incoming bugs, using a top-k approach in which a fixed number of possible duplicate reports are  presented for each incoming report, would further test their effectiveness.
+
+Related Work: The work related to the authors work is by C. Sun, D. Lo, S.-C. Khoo, and J. Jiang who formulated the duplicate bug detection problem as given a bug report, return a list of the top-k most similar bug reports. Also one of the other related works is by Alipour who formulated the problem as given two bug reports, predict whether they are duplicates. The authors have mentioned that their approach is similar to the latter approach.
+
+
