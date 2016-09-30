@@ -23,7 +23,10 @@ iii3. Results : The outcome of the authors’ study is
 iii4. Future work: The authors have suggested that a future study which utilizes their metrics in order to find duplicates of incoming bugs, using a top-k approach in which a fixed number of possible duplicate reports are presented for each incoming report, would further test their effectiveness.
 
 Improvements:
+
 iv1. The author could maintain a separate section for related work. This could ensure that the readers will get proper idea of what related work is already done in the beginning itself. So that they could relate it further in the paper wherever required.
+
 iv2. The author could add a separate section for future work. The author has added future work in the conclusion section. This makes it confusing to understand at times. 
+
 iv3. When the author mentions that their study performs better in terms of some parameters, they could add a few pictorial representation of few of them for better understanding of the reader. 
 
