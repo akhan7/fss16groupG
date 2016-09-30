@@ -11,6 +11,7 @@ ii3. Machine learning: Machine learning is a subfield of computer science that i
 ii4. Deduplication: In computing deduplication is a specialized compression technique for eliminating duplicate copies of repeating data
 
 Notes:
+
 iii1. Data set: The writers have used the data collected by – ‘A. Alipour, A. Hindle, and E. Stroulia. A contextual approach towards more accurate duplicate bug report detection. In Proc. 10th Working Conf. on Mining Software Repositories, pages 183–192, 2013.’. It consists of reports pulled from the android database between November 2007 and September 2012
 
 iii2. Related Work: The work related to the authors work is by C. Sun, D. Lo, S.-C. Khoo, and J. Jiang who formulated the duplicate bug detection problem as given a bug report, return a list of the top-k most similar bug reports. Also one of the other related works is by Alipour who formulated the problem as given two bug reports, predict whether they are duplicates. The authors have mentioned that their approach is similar to the latter approach.
