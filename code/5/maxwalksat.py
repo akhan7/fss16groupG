@@ -3,6 +3,9 @@ import random
 import math
 
 
+def r(a=0, b=1): return random.random()
+
+
 class Osyczka:
     def f1(self, x):
         return -25 * pow(x[0] - 2, 2) - pow(x[1] - 2, 2) \
@@ -14,10 +17,35 @@ class Osyczka:
             sum = sum + pow(x[i], 2)
         return sum
 
+    def min_max(self, tries):
+        i = 0
+        min = float('inf')
+        max = float('-inf')
+
+        while i < tries:
+            x = self.rand_tuple()
+            if self.constraints(x):
+                oval = self.osyczka(x)
+                if oval < min:
+                    min = oval
+                if oval > max:
+                    max = oval
+                i += 1
+
+        return min, max
+
+    def get_normalized(self, x, min, max):
+        return ((self.f1(x) + self.f2(x)) - min) / (max - min)
+
+    def osyczka(self, x):
+        return self.f1(x) + self.f2(x)
+
     def constraints(self, x):
         return self.__g1(x) >= 0 and self.__g2(x) >= 0 and self.__g3(x) >= 0 and self.__g4(x) >= 0 \
-        and self.__g5(x) >= 0 and self.__g6(x) >= 0
+               and self.__g5(x) >= 0 and self.__g6(x) >= 0
 
+    def rand_tuple(self):
+        return (r(0, 10), r(0, 10), r(1, 5), r(0, 6), r(1, 5))
 
     def __g1(self, x):
         return x[0] + x[1] - 2
@@ -37,10 +65,10 @@ class Osyczka:
     def __g6(self, x):
         return pow(x[4] - 3, 2) + x[5] - 4
 
+
 class MaxWalkSat:
-
-    def solve(self,max_tries):
-
+    def solve(self, max_tries):
+        return None
 
 
 if __name__ == '__main__':
