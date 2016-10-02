@@ -12,5 +12,5 @@
 | 3 | [Poker, B'day Paradox](https://github.com/akhan7/fss16groupG/tree/master/code/3) :white_check_mark: |   [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/3/README.md) :white_check_mark:|
 | 4 | [Simulating Schaffer](https://github.com/akhan7/fss16groupG/tree/master/code/4) :white_check_mark: |   [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/4/README.md) :white_check_mark:|
 | 5 |  | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/5/README.md)  | [Genetic Algorithm](https://github.com/akhan7/fss16groupG/blob/master/etc/GA) :white_check_mark:
-| 6 | [MaxWalkSat](https://github.com/akhan7/fss16groupG/blob/master/code/5/maxwalksat.py :white_check_mark: | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/6/README.md) :white_check_mark: | [Finite State Machine](https://github.com/akhan7/fss16groupG/blob/master/etc/FSMS) :white_check_mark:
+| 6 | [MaxWalkSat](https://github.com/akhan7/fss16groupG/tree/master/code/5/maxwalksat.py) :white_check_mark: | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/6/README.md) :white_check_mark: | [Finite State Machine](https://github.com/akhan7/fss16groupG/blob/master/etc/FSMS) :white_check_mark:
 
