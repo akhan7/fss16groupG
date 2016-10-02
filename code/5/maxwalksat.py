@@ -17,7 +17,7 @@ class Osyczka:
     def constraints(self, x):
         return self.__g1(x) >= 0 and self.__g2(x) >= 0 and self.__g3(x) >= 0 and self.__g4(x) >= 0 \
         and self.__g5(x) >= 0 and self.__g6(x) >= 0
-    
+
 
     def __g1(self, x):
         return x[0] + x[1] - 2
@@ -36,6 +36,11 @@ class Osyczka:
 
     def __g6(self, x):
         return pow(x[4] - 3, 2) + x[5] - 4
+
+class MaxWalkSat:
+
+    def solve(self,max_tries):
+
 
 
 if __name__ == '__main__':
