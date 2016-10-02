@@ -1,6 +1,7 @@
 from __future__ import print_function
 import random
 import math
+import copy
 
 
 def r(a=0, b=1): return random.randint(a, b)
@@ -13,7 +14,7 @@ class Osyczka:
         max = float('-inf')
 
         while i < tries:
-            x = self.rand_tuple()
+            x = self.rand_list()
             if self.constraints(x):
                 oval = self.osyczka(x)
                 if oval < min:
@@ -45,8 +46,8 @@ class Osyczka:
         return self.__g1(x) >= 0 and self.__g2(x) >= 0 and self.__g3(x) >= 0 and self.__g4(x) >= 0 \
                and self.__g5(x) >= 0 and self.__g6(x) >= 0
 
-    def rand_tuple(self):
-        return (r(0, 10), r(0, 10), r(1, 5), r(0, 6), r(1, 5), r(0, 10))
+    def rand_list(self):
+        return [r(0, 10), r(0, 10), r(1, 5), r(0, 6), r(1, 5), r(0, 10)]
 
     def __f1(self, x):
         return -25 * pow(x[0] - 2, 2) - pow(x[1] - 2, 2) \
@@ -78,13 +79,38 @@ class Osyczka:
 
 
 class MaxWalkSat:
-    def solve(self, max_tries):
-        return None
+    @staticmethod
+    def solve(max_tries):
+        o = Osyczka()
+        g_min, g_max = o.min_max(5000)
+        print("The global min,max for normalization : ", g_min, g_max)
+        threshold = o.get_threshold(g_min, g_max, 10)
+        print("Stopping condition (threshold) : ", threshold)
+
+        solution = o.rand_list()
+
+        for i in xrange(max_tries):
+            print(solution)
+            if o.get_normalized(o.osyczka(solution), g_min, g_max) < threshold:
+                return solution
+
+            c = r(0, 5)
+            if 0.5 < random.random():
+
+                solution[c] = o.rand_list()[c]
+                while o.constraints(solution):
+                    solution[c] = o.rand_list()[c]
+
+            else:
+                # Throw away solution
+                prev_solution = copy.deepcopy(solution)
+                solution = o.rand_list()
+                while o.constraints(solution) and o.get_normalized(o.osyczka(solution),g_min,g_max) < o.get_normalized(
+                        o.osyczka(prev_solution,g_min,g_max)):
+                    solution = o.rand_list()
+
+        return ("FAILURE", solution)
 
 
 if __name__ == '__main__':
-    o = Osyczka()
-    min, max = o.min_max(5000)
-
-    print(min, max)
-    print(o.get_threshold(min, max, 10))
+    print(MaxWalkSat.solve(100))
