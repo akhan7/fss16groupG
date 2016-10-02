@@ -1,6 +1,7 @@
 ###Paper Title – 
 
 **Search-Based Duplicate Defect Detection: An Industrial Experience**
+
 Mehdi Amoui, Nilam Kaushik, Abraham Al-Dabbagh, Ladan Tahvildari, Shimin Li, Weining Liu
 
 ###Keywords - 
