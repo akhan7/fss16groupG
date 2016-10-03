@@ -172,4 +172,4 @@ class MaxWalkSat:
 
 
 if __name__ == '__main__':
-    print(MaxWalkSat.solve(10000))
+    print(MaxWalkSat.solve(1000))
