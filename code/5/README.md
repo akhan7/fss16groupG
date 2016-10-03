@@ -42,6 +42,7 @@ Minimize the osyczka2 model.
 ------
 
 A case of Failure for 1000 tries
+------
 ![osyczka2](./screen_shots/output3.png)
 
 
