@@ -88,25 +88,28 @@ class MaxWalkSat:
         print("Stopping condition (threshold) : ", threshold)
 
         solution = o.rand_list()
+        while not o.constraints(solution):
+            solution = o.rand_list()
 
         for i in xrange(max_tries):
             print(solution)
-            if o.get_normalized(o.osyczka(solution), g_min, g_max) < threshold:
-                return solution
+            if o.constraints(solution) and o.get_normalized(o.osyczka(solution), g_min, g_max) < threshold:
+                return ("SUCCESS", solution)
 
             c = r(0, 5)
             if 0.5 < random.random():
 
                 solution[c] = o.rand_list()[c]
-                while o.constraints(solution):
+                while not o.constraints(solution):
                     solution[c] = o.rand_list()[c]
 
             else:
                 # Throw away solution
                 prev_solution = copy.deepcopy(solution)
                 solution = o.rand_list()
-                while o.constraints(solution) and o.get_normalized(o.osyczka(solution),g_min,g_max) < o.get_normalized(
-                        o.osyczka(prev_solution,g_min,g_max)):
+                while not o.constraints(solution) and o.get_normalized(o.osyczka(solution), g_min,
+                                                                   g_max) > o.get_normalized(
+                    o.osyczka(prev_solution), g_min, g_max):
                     solution = o.rand_list()
 
         return ("FAILURE", solution)
