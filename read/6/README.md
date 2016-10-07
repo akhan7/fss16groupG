@@ -26,7 +26,7 @@ Christopher S. Corley, Nicholas A. Kraft, Department of Computer Science, The Un
 
 **iii4. Future work:** The authors have suggested that a future study which utilizes their metrics in order to find duplicates of incoming bugs, using a top-k approach in which a fixed number of possible duplicate reports are presented for each incoming report, would further test their effectiveness.
 
-Improvements:
+###Improvements:
 
 iv1. The author could maintain a separate section for related work. This could ensure that the readers will get proper idea of what related work is already done in the beginning itself. So that they could relate it further in the paper wherever required.
 
