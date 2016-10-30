@@ -24,7 +24,7 @@ features improve the within-project defect prediction on average by 14.7% in pre
 
 iii4.Future Work: The authors would like to extend their automatically semantic feature generation approach to C/C++ projects for defect prediction. Also they intend to extend their approach to automatically generate features for predicting defects at other levels, such as change level, module level, and package level.
 
-Improvement:
+Improvements:
 
 iv1.The authors should have mentioned related work in the beginning of the paper. This would have made it easier to follow their approach.
 
