@@ -8,6 +8,16 @@ reproduction steps: steps to produce its kind
 auto-completion: Autocomplete, or auto completion, is a feature in which an application predicts the rest of the work the user is doing. eg:typing words.
 
 Note:
+Related Work:A past survey of open source developers conducted by
+Koru et al. has shown that only  50% of developers believe
+bug reports are always complete [47]. Previous studies have
+also shown that the information most useful to developers
+is often the most dicult for reporters to provide and that
+the lack of this information is a major reason behind nonreproducible
+bug reports [35, 21]. Diculty providing such
+information, especially reproduction steps, is compounded
+in the context of mobile applications due to their complex
+event-driven and GUI-based nature.
 
 Conclusion: Prior research highlights an inherent lexical gap that exists
 between reporters of bugs and developers. To help overcome
