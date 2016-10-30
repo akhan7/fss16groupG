@@ -9,7 +9,7 @@ WPDP: A defect prediction process which is conducted within the  single  softwar
 prediction (WPDP).
 
 Notes:
-Related Work: 
+Related Work: Work related to the authors' work has been described as-  Software Defect Prediction based on WPDP and CDPD. Deep Learning and Semantic Feature Generation in Software Engineering wherein they used DBN to generate features from 14 traditional change level features,ie features generated from their approach are relations among existing features, whereas the authors have used DBN to learn semantic features directly from source code.
 
 Dataset: To facilitate the replication and verification of their experiments, the authors have used PROMISE dataset which is publicly available. They have selected all Java open source projects from PROMISE whose version numbers are provided.
 
