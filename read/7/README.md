@@ -55,3 +55,7 @@ our DFS engine through supporting more gestures, to
 explore adding more specic program information in reports
 for quicker/automatic fault localization, and to use FUSION
 as a tool for reporting feature requests.
+
+Improvements:
+could have added separate section for related work
+could have added separate section for future work instead of combining it with conclusion
