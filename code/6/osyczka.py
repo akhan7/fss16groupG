@@ -4,10 +4,11 @@ from decision import Decision
 
 class Osyczka(Model):
     def __init__(self):
-        objectives = [self.f1, self.f2]
-        decisions = [self.__g1, self.__g2, self.__g3, self.__g4, self.__g5, self.__g6]
-        constraints = [self.constraints]
-        Model.__init__(self, decisions, objectives)
+        objectives = [self.__f1, self.__f2]
+        decisions = [Decision("x1", 0, 10), Decision("x2", 0, 10), Decision("x3", 1, 5), Decision("x4", 0, 6),
+                     Decision("x5", 0, 5), Decision("x6", 0, 10)]
+        constraints = self.__constraints
+        Model.__init__(self, decisions, objectives,constraints)
 
     def __f1(self, x):
         return -(25 * pow(x[0] - 2, 2) + pow(x[1] - 2, 2) \

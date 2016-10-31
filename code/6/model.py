@@ -2,7 +2,7 @@ import random
 
 
 class Model:
-    def __init__(self, decisions, objectives, constraints=[]):
+    def __init__(self, decisions, objectives, constraints=None):
         self.decisions = decisions
         self.objectives = objectives
         self.constraints = constraints
@@ -13,10 +13,8 @@ class Model:
             sum += objective(point)
 
     def is_valid(self, point):
-        for constraint in self.constraints:
-            if not constraint(point):
-                return False
-        return True
+        if self.constraints != None:
+            return self.constraints(point)
 
     def generate_one(self, retries=20):
         while True:
