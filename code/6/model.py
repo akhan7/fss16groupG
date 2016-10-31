@@ -6,7 +6,7 @@ class Model:
         self.decisions = decisions
         self.objectives = objectives
         self.constraints = constraints
-        self.min, self.max, self.min_point, self.max_point = self.get_min_max()
+        self.min, self.max = self.get_min_max()
 
     def __eval(self, point):
         sum = 0
@@ -34,20 +34,11 @@ class Model:
                 return point
 
     def get_min_max(self, retries=1000):
-        min_sc = min_point = float('inf')
-        max_sc =  max_point = float('-inf')
-
+        scores = []
         for i in xrange(retries):
-            point = self.generate_one()
-            curr = self.evaluate(point)
-            if curr < min_ener:
-                min_ener = curr
-                min_point = point
-            if curr > max_ener:
-                max_ener = curr
-                max_point = point
+            scores.append(self.__eval(self.generate_one()))
 
-        return (min_ener, max_ener, min_point, max_point)
+        return min(scores), max(scores)
 
     def normalize(self, score):
         return (score - self.min) / float(self.max - self.min)

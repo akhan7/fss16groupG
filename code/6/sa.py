@@ -3,6 +3,8 @@ from random import *
 import random
 import math
 from schaffer import Schaffer
+from kursawe import Kursawe
+from osyczka2 import Osyczka2
 
 
 class SA:
@@ -52,10 +54,13 @@ class SA:
             k += 1
 
         print("\n\nkmax = ", self.kmax, end="\n")
-        print("The best attainable solution : ", self.model.min , self.model.min_point)
+        print("The range of solution: [",self.model.min,", ", self.model.max,"]")
+        print("The best attainable solution : ", self.model.min)
         print("The attained solution by simuated annealing : ", self.model.denormalize(eb), " at ", sb)
 
         return sb, eb, self.model.min, self.model.max  # print get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
 
 
 SA(Schaffer()).run()
+SA(Osyczka2()).run()
+SA(Kursawe()).run()
