@@ -8,10 +8,10 @@ class Schaffer(Model):
         decisions = [Decision("x",-10 ** 5, 10 ** 5)]
         Model.__init__(self, decisions, objectives)
 
-    def __f1(x):
+    def __f1(self,x):
         """Generates f1(x)"""
         return x * x
 
-    def __f2(x):
+    def __f2(self,x):
         """Generates f2(x)"""
         return (x - 2) * (x - 2)
