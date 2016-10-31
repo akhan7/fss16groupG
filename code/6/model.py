@@ -1,32 +1,28 @@
-from __future__ import print_function
 import random
-import math
-
-
 
 class Model(object):
-    def __init__(self,decisions,objectives,constraints):
+    def __init__(self, decisions, objectives, constraints=[]):
         self.decisions = decisions
         self.objectives = objectives
         self.constraints = constraints
 
-    @staticmethod
-    def evaluate(point):
-        assert False
-        return point.objectives
+    def evaluate(self, point):
+        sum = 0
+        for objective in self.objectives:
+            sum = sum + objective(point)
 
-    @staticmethod
-    def is_valid(point):
+    def is_valid(self, point):
+        for constraint in self.constraints:
+            if constraint(point) == False:
+                return False
         return True
 
-    def generate_one(self, retries=20):
-        for _ in xrange(retries):
-            point = Point([random_value(d.low, d.high) for d in self.decisions])
-            if self.is_valid(point):
+    def generate_one(self,retries=20)
+        while True:
+            point = []
+            for decision in self.decisions:
+                point.append(random.randint(decision.low, decision.high))
+            valid = self.is_valid(point)
+            if valid:
                 return point
-        raise RuntimeError("Exceeded max runtimes of %d" % 20)
-
-
-
-
 
