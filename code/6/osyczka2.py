@@ -2,7 +2,7 @@ from model import Model
 from decision import Decision
 
 
-class Osyczka(Model):
+class Osyczka2(Model):
     def __init__(self):
         objectives = [self.__f1, self.__f2]
         decisions = [Decision("x1", 0, 10), Decision("x2", 0, 10), Decision("x3", 1, 5), Decision("x4", 0, 6),

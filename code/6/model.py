@@ -6,11 +6,16 @@ class Model:
         self.decisions = decisions
         self.objectives = objectives
         self.constraints = constraints
+        self.min, self.max = self.get_min_max()
 
-    def evaluate(self, point):
+    def __eval(self, point):
         sum = 0
         for objective in self.objectives:
             sum += objective(point)
+        return sum
+
+    def evaluate(self, point):
+        return self.normalize(self.__eval(point))
 
     def is_valid(self, point):
         if self.constraints != None:
@@ -26,3 +31,13 @@ class Model:
                 if len(point) == 1:
                     return point[0]
                 return point
+
+    def get_min_max(self, retries=100):
+        points = []
+        for i in xrange(retries):
+            points.append(self.__eval(self.generate_one()))
+
+        return min(points), max(points)
+
+    def normalize(self, score):
+        return (score - self.min) / float(self.max - self.min)
