@@ -12,12 +12,21 @@ We've been learning throughout the semester in **`CSC591 ASE`**
 optimization problem. One of the derivative of this problem is Examination
 time tabling problem which takes in a list of courses offered by a university and schedules
 the list of students enrolled in these courses and schedules the exams in
-such a way that exams in such way that there are no overlaps for a student and the exams
+such a way that there are no overlaps for a student and the exams
 are scheduled as far as possible within a specified window of dates.
 
 
 ### Description
->    
+    Decisions : 
+        * A set of time slots (contiguous) T
+        * A set of courses C
+        * A set of Students S
+        * A set of student enrollments E (Ideally a pair of Student Number and Course ID)
+
+    Objectives :
+    
+
+
 
 
 
