@@ -1,4 +1,3 @@
-import sys
 from sa import SA
 from mws import MWS
 from osyczka2 import Osyczka2
