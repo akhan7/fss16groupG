@@ -63,5 +63,30 @@ for model in [Schaffer, Osyczka2, Kursawe]:
 
 ### Output
 
-Schaffer evaluated by SA
-[]()
+####Schaffer evaluated by SA
+![schaffer](screenshots/schaffer_sa.png)
+
+
+
+####Schaffer evaluated by MWS
+![schaffer](screenshots/schaffer_mws.png)
+
+
+
+####Osyczka2 evaluated by SA
+![Osyczka2](screenshots/osy_sa.png)
+
+
+
+####Osyczka2 evaluated by MWS
+![Osyczka2](screenshots/osy_mws.png)
+
+
+
+####Kursawe evaluated by SA
+![schaffer](screenshots/kursawe_sa.png)
+
+
+
+####Kursawe evaluated by MWS
+![schaffer](screenshots/kursawe_mws.png)
