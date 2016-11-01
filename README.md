@@ -14,5 +14,5 @@
 | 5 |  | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/5/README.md) :white_check_mark: | [WS1: Genetic Algorithm](https://github.com/akhan7/fss16groupG/blob/master/etc/GA) :white_check_mark:
 | 6 | [MaxWalkSat](https://github.com/akhan7/fss16groupG/tree/master/code/5/maxwalksat.py) :white_check_mark: | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/6/README.md) :white_check_mark: | [WS2: Finite State Machine](https://github.com/akhan7/fss16groupG/blob/master/etc/FSMS) :white_check_mark:
 | 7 | | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/7/README.md) :white_check_mark:| [WS3: POM3-GA](https://github.com/akhan7/fss16groupG/blob/master/etc/Pom3_GA) :white_check_mark:
-| 8 | [Generic Experiments](https://github.com/akhan7/fss16groupG/tree/master/code/6/generic_experiment.py) | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/8/README.md) :white_check_mark:|
+| 8 | [Generic Experiments](https://github.com/akhan7/fss16groupG/tree/master/code/6/) :white_check_mark: | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/8/README.md) :white_check_mark:| [Performance](https://github.com/akhan7/fss16groupG/blob/master/etc/performance) :white_check_mark:
 
