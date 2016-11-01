@@ -12,7 +12,7 @@ class MWS:
         self.model = model
         self.max_tries = 100
         self.max_changes = 20
-        self.threshold = 0.05
+        self.threshold = 0.001
         self.prob = 0.5
 
     def run(self):
@@ -44,7 +44,9 @@ class MWS:
                 else:
                     print(".", end='')
             print(", ", round(self.model.evaluate(best), 5))
-        print("Num iterations:", self.max_tries)
+            if self.model.evaluate(best) < self.threshold:
+                break
+        print("Num iterations:", i)
         print("Best solution:", best)
         print("Best score:", self.model.evaluate(best))
 
