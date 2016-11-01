@@ -7,4 +7,4 @@ from schaffer import Schaffer
 
 for model in [Schaffer, Osyczka2, Kursawe]:
     for optimizer in [SA, MWS]:
-           optimizer(model())
+           optimizer(model()).run()

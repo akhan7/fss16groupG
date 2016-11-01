@@ -44,9 +44,9 @@ class MWS:
                 else:
                     print(".", end='')
             print(", ", round(self.model.evaluate(best), 5))
-        print("#iterations:", self.max_tries)
-        print("best solution:", best)
-        print("best score:", self.model.evaluate(best))
+        print("Num iterations:", self.max_tries)
+        print("Best solution:", best)
+        print("Best score:", self.model.evaluate(best))
 
     def __mutate_any(self, x):
         x_backup = x[:]
