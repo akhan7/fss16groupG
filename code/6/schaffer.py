@@ -10,8 +10,8 @@ class Schaffer(Model):
 
     def __f1(self,x):
         """Generates f1(x)"""
-        return x * x
+        return x[0] * x[0]
 
     def __f2(self,x):
         """Generates f2(x)"""
-        return (x - 2) * (x - 2)
+        return (x[0] - 2) * (x[0] - 2)

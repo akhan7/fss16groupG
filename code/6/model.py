@@ -22,15 +22,13 @@ class Model:
             return self.constraints(point)
         return True
 
-    def generate_one(self, retries=20):
+    def generate_one(self):
         while True:
             point = []
             for decision in self.decisions:
                 point.append(random.randint(decision.low, decision.high))
             valid = self.is_valid(point)
             if valid:
-                if len(point) == 1:
-                    return point[0]
                 return point
 
     def get_min_max(self, retries=1000):
