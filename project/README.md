@@ -49,7 +49,7 @@ to model this problem with ACO
 
 * #### PSO :
 
-* ### ACO :
+* #### ACO :
 
 
 
