@@ -37,17 +37,25 @@ are scheduled as far as possible within a specified window of dates.
     ![costs](./pics/cost.PNG)
 
 
-### What algorithms can we use to model this problem?
+### What algorithms can we use to optimize this problem?
 
 During the course we have come across a variety of meta heuristic algorithms like Simulated Annealing, 
-Genetic algorithm , Particle Swarm optimization and so on.  Just for fun read about  **Ant colony Optimization** and try 
-to model this problem with ACO
+Genetic algorithm , Particle Swarm optimization and so on. >>> Just for fun read about  **Ant colony Optimization** and try 
+when you get time <<<<
 
 * #### Simulated Annealing :
+Simulated annealing (SA) is a probabilistic technique for approximating the global optimum of a given function. Specifically, it is a metaheuristic to approximate global optimization in a large search space. 
+It is often used when the search space is discrete (e.g., all tours that visit a given set of cities). Simulated annealing interprets slow cooling as a slow decrease in the probability of accepting worse solutions as it explores the solution space. Accepting worse solutions is a fundamental property of
+metaheuristics because it allows for a more extensive search for the optimal solution.<sub>Taken from wikipedia</sub>
 
 * #### Genetic Algorithm :
+In computer science and operations research, a genetic algorithm (GA) is a metaheuristic inspired by the process of natural selection that belongs to the larger class of evolutionary algorithms (EA). Genetic algorithms are commonly used to generate high-quality solutions to optimization and search problems 
+by relying on bio-inspired operators such as mutation, crossover and selection.
 
-* #### PSO :
+* #### PSO : 
+Particle swarm optimization (PSO) is a computational method that optimizes a problem by 
+iteratively trying to improve a candidate solution with regard to a given measure of quality. It solves a problem by having a population of candidate solutions, here dubbed particles, and moving these particles around in the search-space according to simple mathematical formulae over the particle's position and velocity. Each particle's movement is influenced by its local best known position, but is also guided toward the best known positions 
+in the search-space, which are updated as better positions are found by other particles. <sub>Taken from class notes</sub>
 
 * #### ACO :
 
