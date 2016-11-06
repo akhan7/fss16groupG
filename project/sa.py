@@ -2,9 +2,6 @@ from __future__ import division, print_function
 from random import *
 import random
 import math
-from schaffer import Schaffer
-from kursawe import Kursawe
-from osyczka2 import Osyczka2
 
 
 class SA:
@@ -60,7 +57,3 @@ class SA:
 
         return sb, eb, self.model.min, self.model.max  # print get_min_max(SCHAFFER_X_MIN, SCHAFFER_X_MAX)
 
-
-SA(Schaffer()).run()
-SA(Osyczka2()).run()
-SA(Kursawe()).run()
