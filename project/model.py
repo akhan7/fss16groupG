@@ -18,7 +18,7 @@ class Model:
         return self.normalize(self.__eval(point))
 
     def is_valid(self, point):
-        if self.constraints != None:
+        if self.constraints is not None:
             return self.constraints(point)
         return True
 
