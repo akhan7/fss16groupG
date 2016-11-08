@@ -35,12 +35,11 @@ class Course:
 
 
 
-class TimeSlots:
+class TimeSlot:
     """
     Time slots have a start and end time and will contain a Course
     """
-    def __init__(self, date, start_time, end_time):
-        self.date = date
+    def __init__(self, start_time, end_time):
         self.start_time = start_time
         self.end_time = end_time
         self.course = None
@@ -49,3 +48,5 @@ class TimeSlots:
     def assign(timeslot, course):
         if timeslot.course is not None:
             timeslot.course = course
+
+
