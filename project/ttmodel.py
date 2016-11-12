@@ -10,9 +10,9 @@ class TimeTableModel(Model):
         objectives = [self.__soft_prox, self.__hard_prox]
         decisions = []
         constraints = []
-        Model.__init__(self, decisions, objectives,constraints)
+        Model.__init__(self, decisions, objectives, constraints)
 
-    def __soft_prox(self,timeslots):
+    def __soft_prox(self, timeslots):
         """
         Args:
             timeslots:
@@ -22,16 +22,19 @@ class TimeTableModel(Model):
 
         """
 
-    def generate_one(self):
-        while True:
-            point = []
-            for decision in self.decisions:
+    # def generate_one(self):
+    #     while True:
+    #         point = []
+    #         for decision in self.decisions:
+    #
+    #         valid = self.is_valid(point)
+    #         if valid:
+    #             return point
 
-            valid = self.is_valid(point)
-            if valid:
-                return point
+    def hard_prox(self, timeslots):
+        """
 
-
-    def hard_prox(self):
+        :return:
+        """
 
         return 0

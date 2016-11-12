@@ -3,6 +3,7 @@ class Student:
     """
         Wrapper class for a Student and has a reference to the courses taken by this student
     """
+
     def __init__(self, name, id):
         self.name = name
         self.id = id
@@ -23,16 +24,22 @@ class Course:
         self.students = []
 
     def __eq__(self, other):
-        return self.name == other.name and self.id == other.id
+        return self.cname == other.cname and self.cid == other.cid
 
     @staticmethod
     def register(course, student):
+        if not Course.isRegistered(course, student):
+            course.students.append(student)
+            if not student.courses.__contains__(course):
+                student.courses.append(course)
+
+    @staticmethod
+    def isRegistered(course, student):
         if not course is None and not student is None:
             if not course.students.__contains__(student):
-                course.students.append(student)
-                if not student.courses.__contains__(course):
-                    student.courses.append(course)
-
+                return False
+            return True
+        return False
 
 
 class TimeSlot:
@@ -51,5 +58,3 @@ class TimeSlot:
     def assign(timeslot, course):
         if timeslot.course is not None:
             timeslot.course = course
-
-
