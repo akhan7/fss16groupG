@@ -6,9 +6,9 @@ from decision import Decision
 
 
 class TimeTableModel(Model):
-    def __init__(self):
+    def __init__(self,data):
         objectives = [self.__soft_prox, self.__hard_prox]
-        decisions = []
+        decisions = [Decision("courses",data.courses),Decision("days",data.days)]
         constraints = []
         Model.__init__(self, decisions, objectives, constraints)
 
@@ -22,14 +22,8 @@ class TimeTableModel(Model):
 
         """
 
-    # def generate_one(self):
-    #     while True:
-    #         point = []
-    #         for decision in self.decisions:
-    #
-    #         valid = self.is_valid(point)
-    #         if valid:
-    #             return point
+    def generate_one(self):
+
 
     def hard_prox(self, timeslots):
         """

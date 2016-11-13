@@ -18,10 +18,11 @@ class Course:
         Wrapper class for a course and has a reference to the students who attend this course
     """
 
-    def __init__(self, name, id):
+    def __init__(self, name, id, duration=2):
         self.cname = name
         self.cid = id
         self.students = []
+        self.duration = duration
 
     def __eq__(self, other):
         return self.cname == other.cname and self.cid == other.cid
@@ -58,3 +59,11 @@ class TimeSlot:
     def assign(timeslot, course):
         if timeslot.course is not None:
             timeslot.course = course
+
+
+class ClassRoom:
+    def __init__(self, id, capacity, lat, long):
+        self.id = id
+        self.capacity = capacity
+        self.latitude = lat
+        self.longitude = long
