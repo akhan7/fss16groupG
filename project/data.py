@@ -1,5 +1,5 @@
 import csv
-import sys
+from datetime import datetime, timedelta
 from ttmodel_comps import *
 import random
 
@@ -8,15 +8,23 @@ class Data:
     def __init__(self):
         self.courses = {}
         self.students = {}
-        self.registration = []
+        self.dates = {}
         self.__populate_data()
+
+    def __populate_dates(self):
+        start_date = "11/11/2016"
+        end_date = "12/11/2016"
+        currDate = datetime.strptime(start_date, TimeSlot.format)
+        while currDate < (datetime.strptime(end_date, TimeSlot.format)):
+            self.dates[currDate] = {}
+            currDate = currDate + timedelta(days=1)
 
     def __populate_students(self):
         f = open("data/students.dat", 'rt')
         try:
             reader = csv.reader(f)
             for row in reader:
-                self.students[row[0]] = Student(row[1] + row[2],row[0])
+                self.students[row[0]] = Student(row[1] + row[2], row[0])
         finally:
             f.close()
 
@@ -61,10 +69,12 @@ class Data:
     def __populate_data(self):
         self.__populate_courses()
         self.__populate_students()
-        self.__random_reg()
+        # self.__random_reg()
+        self.__populate_registration()
+        self.__populate_dates()
 
 
 ##test##
 d = Data()
 
-print len(d.courses), len(d.students), len(d.registration)
+print len(d.courses), len(d.students)
