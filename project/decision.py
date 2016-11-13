@@ -3,12 +3,10 @@ class Decision:
     Class indicating Decision of a problem
     """
 
-    def __init__(self, name, low, high):
+    def __init__(self, name, possible_values):
         """
         @param name: Name of the decision
-        @param low: minimum value
-        @param high: maximum value
+        @:param possible_values: list of values that the decision can take
         """
         self.name = name
-        self.low = low
-        self.high = high
+        self.possible_values = possible_values
