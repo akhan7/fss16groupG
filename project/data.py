@@ -14,9 +14,10 @@ class Data:
     def __populate_dates(self):
         start_date = "11/11/2016"
         end_date = "12/11/2016"
+
         currDate = datetime.strptime(start_date, TimeSlot.format)
         while currDate < (datetime.strptime(end_date, TimeSlot.format)):
-            self.dates[currDate] = {}
+            self.dates[currDate] = []
             currDate = currDate + timedelta(days=1)
 
     def __populate_students(self):
