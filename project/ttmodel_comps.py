@@ -55,10 +55,8 @@ class TimeSlot:
         self.end_time = end_time
         self.course = None
 
-    @staticmethod
-    def assign(timeslot, course):
-        if timeslot.course is not None:
-            timeslot.course = course
+    def assign(self, course):
+        self.course = course
 
 
 class ClassRoom:
