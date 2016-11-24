@@ -39,6 +39,9 @@ class TimeSlot:
     """
     Time slots have a start and end time and will contain a Course
     """
+    format = '%m/%d/%Y'
+    push_format = '%m/%d/%Y %H:%M:%S'
+
     def __init__(self, start_time, end_time):
         self.start_time = start_time
         self.end_time = end_time
