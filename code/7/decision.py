@@ -1,18 +1,4 @@
-import random
-
-
-class Decision(object):
-
-    def __init__(self, name, min_val, max_val):
-        self.name = name
-        self.min_val = min_val
-        self.max_val = max_val
-
-    def generate_valid_val(self):
-        return random.uniform(self.min_val, self.max_val)
-
-    def get_range(self):
-        return (self.min_val, self.max_val)
-
-    def wrap(self, value):
-        return self.min_val + (value - self.min_val) % (self.max_val - self.min_val)
+class Decision:
+    def __init__(self,low,high):
+        self.hi = high
+        self.lo = low
