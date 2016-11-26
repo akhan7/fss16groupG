@@ -58,6 +58,7 @@ def runner():
     # rdivDemo(all_eras)
     # with open('output_hv.txt', 'w') as f:
     #     for model in all_eras:
+    #         print "------------------------------"
     #         for val in model:
     #             f.write(str(val) + ",")
     #         f.write("\n\n")
