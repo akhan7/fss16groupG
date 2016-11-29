@@ -1,4 +1,4 @@
-from helpers.candidate import Candidate
+from candidate import Candidate
 import random
 
 

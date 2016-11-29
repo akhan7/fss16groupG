@@ -1,24 +1,20 @@
-# from model.schaffer import Schaffer
-# from model.osyczka2 import Osyczka2
-# from model.kursawe import Kursawe
-# from model.golinski import Golinski
-from model.dtlz import DTLZ1, DTLZ3, DTLZ5, DTLZ7
-from optimizer.ga import ga, generate_random_population
-from optimizer.helpers.sk import rdivDemo
+from dtlz import DTLZ1, DTLZ3, DTLZ5, DTLZ7
+from ga import ga, generate_random_population
+from sk import rdivDemo
 import time
 
 
-def timing(f):
-    def wrap(*args, **kwargs):
-        time1 = time.time()
-        ret = f(*args, **kwargs)
-        time2 = time.time()
-        print '%s function took %0.3f ms' % (f.func_name, (time2-time1)*1000.0)
-        return ret
-    return wrap
+# def timing(f):
+#     def wrap(*args, **kwargs):
+#         time1 = time.time()
+#         ret = f(*args, **kwargs)
+#         time2 = time.time()
+#         print '%s function took %0.3f ms' % (f.func_name, (time2-time1)*1000.0)
+#         return ret
+#     return wrap
 
 
-@timing
+# @timing
 def runner():
     all_eras = []
     for num in range(20):
@@ -53,13 +49,17 @@ def runner():
                         if not flag:
                             curr_model_hv = [model_id, hv]
                             all_eras += [curr_model_hv]
+        for model in all_eras:
+            print "------------------------------"
+            for val in model:
+                print str(val) + " , "
         print "Iteration " + str(num) + " done!"
 
-    rdivDemo(all_eras)
-    with open('output_hv.txt', 'w') as f:
-        for model in all_eras:
-            for val in model:
-                f.write(str(val) + ",")
-            f.write("\n\n")
+    # rdivDemo(all_eras)
+    # with open('output_hv.txt', 'w') as f:
+    #     for model in all_eras:
+    #         for val in model:
+    #             f.write(str(val) + ",")
+    #         f.write("\n\n")
 
 runner()
