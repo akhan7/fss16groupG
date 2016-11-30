@@ -1,12 +1,8 @@
-# from model.schaffer import Schaffer
-# from model.osyczka2 import Osyczka2
-# from model.kursawe import Kursawe
-# from model.golinski import Golinski
-from model.dtlz import DTLZ1, DTLZ3, DTLZ5, DTLZ7
-from model.gamodel import GAModel
-from optimizer.ga import ga, generate_random_population
-from optimizer.de2 import de
-from optimizer.helpers.sk import rdivDemo
+from dtlz import DTLZ1, DTLZ3, DTLZ5, DTLZ7
+from gamodel import GAModel
+from ga import ga, generate_random_population
+from de2 import de
+from sk import rdivDemo
 import time
 
 

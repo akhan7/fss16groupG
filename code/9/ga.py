@@ -32,7 +32,7 @@ from __future__ import division
 import random
 # from common import prerun
 from collections import deque
-from model.helpers.candidate import Candidate
+from candidate import Candidate
 import time
 
 

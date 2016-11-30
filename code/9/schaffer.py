@@ -1,5 +1,5 @@
 from model import Model
-from helpers.decision import Decision
+from decision import Decision
 
 
 class Schaffer(Model):

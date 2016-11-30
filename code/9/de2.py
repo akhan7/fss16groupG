@@ -2,8 +2,8 @@ from __future__ import division
 import random
 import math
 from common import prerun_each_obj
-from model.helpers.candidate import Candidate
-from helpers.a12 import a12
+from candidate import Candidate
+from sk import a12
 """ This contains the optimizers """
 
 

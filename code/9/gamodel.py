@@ -1,6 +1,6 @@
 from __future__ import division
 from model import Model
-from helpers.decision import Decision
+from decision import Decision
 import math
 
 PI = math.pi
