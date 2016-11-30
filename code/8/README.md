@@ -39,13 +39,20 @@ We carry this study forward by evaluating the performance of this non dominated 
 
 
 ###Implementation 
-
+  We implemeted the NSGA-II Algorithm on DTLZ 1 , 3, 5 , 7 each time with 2,4,6,8 objectives and 10, 20 , 40 decisions. 
+  The default values of Genetic Algorithm have been used:
+  
+    * Probabilty for mutation: 0.05 
+    * Probabilty for crossover: 1
+    * Number of candidates: 100 
+    * Number of generations: 10
 
 ###Results
-
+  
 
 
 ###Conclusions
+
 
 ###Threats to Validity 
   1.  Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
@@ -73,4 +80,4 @@ We carry this study forward by evaluating the performance of this non dominated 
    The study uses code found here :
  1.  This study uses code for Scott Knott given here : https://github.com/txt/mase/blob/master/src/doc/sk.py
  2.  This study used Hypervolume functions given here: 
-     [Hypervolume Calculator](https://github.com/ai-se/storm/tree/master/PerformanceMetrics) 
+     [Hypervolume Calculator](https://github.com/ai-se/storm/tree/master/PerformanceMetrics)
