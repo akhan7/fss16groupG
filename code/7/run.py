@@ -7,11 +7,11 @@ if __name__ == '__main__':
     # repeats = 1
     for model in [DTLZ7]:
         data = []
-        baseline = [model() for _ in xrange(repeats)]
         for i,optimizer in enumerate([sa,mws,de]):
             opt_rpt = []
             opt_rpt.append(optimizer.func_name)
             for j in range(repeats):
+                baseline = [model() for _ in xrange(repeats)]
                 pre = model()
                 pre.copy(baseline[j])
                 res = optimizer(model, baseline[j])
