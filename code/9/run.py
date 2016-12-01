@@ -21,7 +21,7 @@ def runner():
     all_eras = []
     for num in range(1):
 
-        for model in [DTLZ5]:  # , Osyczka2, Kursawe, Golinski]:
+        for model in [DTLZ3]:  # , Osyczka2, Kursawe, Golinski]:
 
             era_size = 100
 

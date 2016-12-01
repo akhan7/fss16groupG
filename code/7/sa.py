@@ -2,7 +2,7 @@ from __future__ import division
 import random
 from common import prerun
 from candidate import Candidate
-from sk import a12
+from stats import a12
 # from helpers.sk import r
 import math
 import sys

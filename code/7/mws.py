@@ -2,7 +2,7 @@ from __future__ import division
 import random
 from common import prerun
 from candidate import Candidate
-from sk import a12
+from stats import a12
 
 
 def mws(model, p=0.5, threshold=0.001, max_tries=500, max_changes=10, era_size=100, era0=None, lives=5):
@@ -20,19 +20,19 @@ def mws(model, p=0.5, threshold=0.001, max_tries=500, max_changes=10, era_size=1
     # if energy of can1 is less than that of can2
     # can1 is better and this returns true
     def type1(can1, can2):
-        return (n_score(can1) < n_score(can2))
+        return n_score(can1) < n_score(can2)
 
     def type2(era1, era2):
         for index, objective in enumerate(era2):
             a12_score = a12(era1[index], objective)
-            if (a12_score >= 0.56):
+            if a12_score >= 0.56:
                 return True
         return False
 
     # best_score = 1.0
 
     if not era0:
-        print "ERRRRRRRRRRRRRRRRRRRRRRRRRRRROR"
+        print "Shouldn't be here"
         curr_era = [[] for _ in model.objectives()]
         curr_lives = lives
 

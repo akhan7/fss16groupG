@@ -758,7 +758,7 @@ As to how many bootstraps are enough, that depends on the data. There are
 results saying 200 to 400 are enough but, since I am  suspicious man, I run it for 1000.
 Which means the runtimes associated with bootstrapping is a significant issue.
 To reduce that runtime, I avoid things like an all-pairs comparison of all treatments
-(see below: Scott-knott).  Also, BEFORE I do the boostrap, I first run
+(see below: Scott-knott).  Also, BEFORE I do the bootstrap, I first run
 the effect size test (and only go to bootstrapping in effect size passes:
 """
 

@@ -1,7 +1,7 @@
 from __future__ import division
 import random
 from candidate import Candidate
-from sk import a12
+from stats import a12
 
 """ This contains the optimizers """
 
