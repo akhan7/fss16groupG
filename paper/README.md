@@ -1,4 +1,4 @@
-Developments in Automated Bug Reporting Process in a Software
+Developments in Duplicate Bug Reporting Process in a Software
 
 //Add names and email address
 
