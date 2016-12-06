@@ -3,12 +3,11 @@ import random
 import math
 from common import prerun_each_obj
 from candidate import Candidate
-from sk import a12
+from stats import a12
 """ This contains the optimizers """
 
 
 def de(model, frontier_size=10, cop=0.4, ea=0.5, max_tries=100, threshold=0.01, era_size=10, era0=None, lives=5):
-
     # normalizers = prerun_each_obj(model, runs=10000)
     out = []
     print max_tries
