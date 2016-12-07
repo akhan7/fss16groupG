@@ -24,6 +24,10 @@ After an initial population is randomly generated, the algorithm evolves the thr
 
 > Parameters required by GA
 
+* Population Size
+* Number of Generations
+* Crossover probability
+* Mutation probability 
 
 > What is Differential Evolution (DE) ?
 
@@ -37,7 +41,41 @@ In this experiment we do the following
 * Add in values from one other extrapolation (Y-Z)
 * DE is used to try and optimize the parameters of the GA to get better results for DTLZ5 with 10 decision values and 2 objective functions
 
-We have used binary domination as the method for comparing the fitness of 2 possible candidates.
+### Implementation
+
+1. The model used is DLTZ1 with 2 objectives and 10 decisions
+2. Genetic Algorithm is developed to optimize the objectives of the above model. From the finally obtained frontier, the distance From Hell is calculated by finding the nearest neighbor in the baseline frontier and determining the distance between these points. The mean of all these distances is used as the 
+aggregate score of the GA for comparison basis.
+3. A model encompassing the GA parameters in written as follows. 
+
+```python
+  def ga(model, b_min, b_max, b_pop, num_can, num_gen, p_mut, p_cros):
+    population_size = num_can
+    generations = num_gen 
+    p_crossover = p_cros 
+    p_mutation = p_mut 
+    total_decs = 10
+    total_objs = 2
+    base_min = b_min
+    base_max = b_max
+```
+
+4. The Differential Evolution model is implemented which works on the GA candidates. It generates an
+initial frontier of candidates, and then iterates over the number of repeats trying to mutate the parameters of configuration so as to obtain the maximum distance from Hell (farther points result in more optimized objectives). Type 1 and Type 2 comparators are used for 
+candidate selection and early termination of DE.
+
+5. The final result is the best GA configuration, with the corresponding distance value, and the final populated frontier of configurations ranked based on the distance metric.
+6. The best configuration is fed into GA optimizer of DTLZ1, to find the resulting mean distance and the solution obtained is compared with the solution obtained from untuned GA with default parameters.
+
+### Results
+
+
+### Threats to validity
+
+
+### Future work
+
+
 
 ### References
 [https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html](https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html)
