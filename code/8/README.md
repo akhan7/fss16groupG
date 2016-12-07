@@ -48,7 +48,11 @@ The NSGA-II algorithm proposed by the authors used the fast dominated sorting ap
 ###Threats to Validity 
   1. Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
 
-###Future Work 
+###Future Work
+  1.  We could generate multiple instances of the default values and generate the graphs for those and then decide which set of values work the best.
+  2.  We could use other performance measures apart from hypervolume such as spread or IQR as well as the time for which the code runs and then do a comprehensive analysis between GA and NSGA-II.
+  3.  We could use test the algorithm with other models and see how the performance of the algorithm changes with different models.
+
 
 ###References:-
 
