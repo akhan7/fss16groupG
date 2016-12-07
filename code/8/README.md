@@ -46,7 +46,10 @@ The NSGA-II algorithm proposed by the authors used the fast dominated sorting ap
 ###Conclusions
 
 ###Threats to Validity 
-  1. Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
+  1.  Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
+  2.  Binary domination may not always work as well as we expect it to. Consider a not-so-common scenario where no candidate binary-dominates another candidate in the population. In such cases, how do we determine who the fittest individuals are?
+  3.  As discussed earlier, we use the hypervolume as a metric of "goodness" of the best pareto frontier found. While this seems to be a promising approach, there is still much debate and ongoing research in this area.
+
 
 ###Future Work
   1.  We could generate multiple instances of the default values and generate the graphs for those and then decide which set of values work the best.
