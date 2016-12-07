@@ -2,7 +2,7 @@ from dtlz import DTLZ1, DTLZ3, DTLZ5, DTLZ7
 from gamodel import GAModel
 from ga import ga, generate_random_population
 from de2 import de
-from sk import rdivDemo
+from stats import rdivDemo
 import time
 
 
@@ -21,7 +21,7 @@ def runner():
     all_eras = []
     for num in range(1):
 
-        for model in [DTLZ3]:  # , Osyczka2, Kursawe, Golinski]:
+        for model in [DTLZ3]:
 
             era_size = 100
 

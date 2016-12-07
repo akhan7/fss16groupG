@@ -7,7 +7,7 @@ In other words we are trying to optimize an optimizer. We will be comparing the 
 
 ### Introduction
 
-> What is Genetic Algorithm?
+> What is Genetic Algorithm (GA)?
 
 Genetic Algorithms were invented to mimic some of the processes observed in natural evolution. Many people, biologists included, are astonished that life at the level of complexity that we observe could have evolved in the relatively short time suggested by the fossil record. The idea with GA is to use this power of evolution to solve optimization problems.
 
@@ -25,6 +25,19 @@ After an initial population is randomly generated, the algorithm evolves the thr
 > Parameters required by GA
 
 
+> What is Differential Evolution (DE) ?
+
+Differential evolution optimizes a problem by maintaining a population of candidate solutions and creating new candidate solutions by combining existing ones according to a formula which depends on
+ the variation of DE being used, and then keeping whichever candidate solution has the best score or fitness on the optimization problem at hand. It makes few or no assumptions about the problem being optimized and can search very large spaces of candidate solutions.
+
+DE replaces the currently selected candidate immediately if the new candidate formed by extrapolation is better than it. Hence it doesn't need one to one comparison with each of the existing candidates to maintain best solutions. In this way it is much better than GA.
+
+In this experiment we do the following
+* Extrapolate from some candidate X, chosen at random.
+* Add in values from one other extrapolation (Y-Z)
+* DE is used to try and optimize the parameters of the GA to get better results for DTLZ5 with 10 decision values and 2 objective functions
+
+We have used binary domination as the method for comparing the fitness of 2 possible candidates.
 
 ### References
 [https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html](https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html)
