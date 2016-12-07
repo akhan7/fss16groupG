@@ -47,19 +47,8 @@ The NSGA-II algorithm proposed by the authors used the fast dominated sorting ap
 
 ###Threats to Validity 
   1. Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
-  2. There is a discrepancy observed for DTLZ3 with 8 objectives and 20 and 40 decisions.
-  3. We use Hypervolume function to measure performance. There are multiple other tools which could be used. The given results might 
-   be skewed because of the use of Hypervolume. 
-  4. The early termination condtion may be terminating a loop prematurely when a better candidate could be found.
 
 ###Future Work 
-1. We could generate multiple instances of the default values and generate the graphs for those and then decide which 
-   set of values work the best. 
-2. Instead of just using hypervolume , we could also use spread or the loss and compute multiple graphs. Instead on measuring 
-   performance based on just hypervolume , we could base it on all three of the parameters and then conclude results.
-3. The early termination condition could be changed to a more lenient one , we could instead terminate when there are two instances
-   of the chid frontier not doing any better. 
-4. GA could be extended to multiple other models and the efficiency of it to optimize other models could be measured as well. 
 
 ###References:-
 
