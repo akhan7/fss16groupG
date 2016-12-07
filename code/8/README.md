@@ -35,6 +35,8 @@ In the famous paper *A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-I
 
 The NSGA-II algorithm proposed by the authors used the fast dominated sorting approach with O(M N<sup>2</sup>) computational complexity. Also, a selection operator was presented that creates a mating pool by combining the parent and offspring populations and selecting the best (with respect to fitness and spread) N solutions. Simulation results on difficult test problems showed that the proposed NSGA-II, in most problems, was able to find much better spread of solutions and better convergence near the true Pareto-optimal front compared to Pareto-archived evolution strategy and strength-Pareto EA—two other elitist MOEAs that pay special attention to creating a diverse Pareto-optimal front.
 
+We carry this study forward by evaluating the performance of this non dominated sorting algorithm by testing it exhaustively with 4 models and 20 iterations. The results of this test are discussed below.
+
 
 ###Implementation 
 
