@@ -4,6 +4,10 @@ from random import random, randint, seed
 from math import exp
 from stats import a12
 
+early_term_count_de = 0
+early_term_count_mws = 0
+early_term_count_sa = 0
+
 
 def type1(x, y):
     return x.score() < y.score()
@@ -59,15 +63,17 @@ def mws(model, init_pop):
             lives += type2(prev, cur)
             prev = cur[:]
         if lives is 0:
-            print("\n no changing detected, early terminating program")
+            print("\n Terminating early")
+            global early_term_count_mws
+            early_term_count_mws += 1
             break
 
-        print("Era: %s" % era, "Current Best solution: %s, " % sb.cands, "\nf1 and f2: %s, " % sb.fi(),
-              ", at which eval the best x is found: %s" % eb)
+        # print("Era: %s" % era, "Current Best solution: %s, " % sb.cands, "\nObjective scores %s, " % sb.fi(),
+        #       ", Best energy %s" % eb)
         era = era + 1
 
-    print("Best solution found: %s, " % sb.cands, "\nf1 and f2: %s, " % sb.fi(),
-          ", at which eval the best x is found: %s" % eb)
+    # print("Best solution: %s, " % sb.cands, "\nObjective scores %s, " % sb.fi(),
+    #      ", Best energy: %s" % eb)
 
     return sb
 
@@ -108,7 +114,7 @@ def sa(model, init_pop):
     eb = e
     kmax = 1000
     linewidth = 50
-    print('\n %4d : %f ,' % (1, eb))
+    # print('\n %4d : %f ,' % (1, eb))
     prev = []
     cur = []
     lives = 5
@@ -145,11 +151,14 @@ def sa(model, init_pop):
                 lives += type2(prev, cur)
                 prev = cur[:]
             if lives == 0:
+                global early_term_count_sa
+                early_term_count_sa += 1
                 print('\nTerminating early')
                 break
             cur = []
-            print('   %4d : %f ,' % (k, eb))
-    print("\nBest solution: %s, " % sb.cands, "\nf1 and f2: %s, " % sb.fi(), sb.score())
+            # print('   %4d : %f ,' % (k, eb))
+
+    # print("\nBest solution: %s, " % sb.cands, "\nObjective scores %s, " % sb.fi(), sb.score())
     return sb
 
 
@@ -227,13 +236,15 @@ def de(mode, baseline, max_tries=20, frontier_size=25, f=0.75, cf=0.3, epsilon=0
     # eras
     for k in range(max_tries):
         frontier, cur = update(mode, f, cf, frontier)
-        print(cur)
+
         if not prev:
             prev = cur[:]
         else:
             lives += type2(prev, cur)
             prev = cur[:]
         if lives is 0:
+            global early_term_count_de
+            early_term_count_de += 1
             print("\n Terminating early")
             break
 
@@ -250,5 +261,9 @@ def de(mode, baseline, max_tries=20, frontier_size=25, f=0.75, cf=0.3, epsilon=0
                 ib = i
 
     f1, f2 = frontier[ib].fi()
-    print(f1, f2, frontier[ib].cands, score)
+    # print(f1, f2, frontier[ib].cands, score)
     return frontier[ib]
+
+def print_average():
+    print ("Number of early terminations for DE , MWS and SA - This experiment only...not average")
+    print(early_term_count_de ,early_term_count_mws , early_term_count_sa)

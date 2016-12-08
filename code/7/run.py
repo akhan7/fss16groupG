@@ -1,5 +1,5 @@
 from dtlz7 import DTLZ7
-from optimizers import mws,de,sa
+from optimizers import mws,de,sa,print_average
 from stats import rdivDemo
 
 if __name__ == '__main__':
@@ -20,3 +20,5 @@ if __name__ == '__main__':
                 # opt_rpt.append(res.score() * 1000)
             data.append(opt_rpt)
         rdivDemo(data)
+
+    print_average()
