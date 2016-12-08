@@ -124,5 +124,5 @@ Comparing the tuned vs untuned GA, the hypervolume for the tuned GA is higher th
 4. Also we intend to improve the results by using CDOM instead of BDOM and by performing more experiments. 
 
 
-[1]### References
-[https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html](https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html)
+### References
+[1][https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html](https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html)
