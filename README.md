@@ -15,7 +15,7 @@
 | 6 | [MaxWalkSat](https://github.com/akhan7/fss16groupG/tree/master/code/5/) :white_check_mark: | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/6/README.md) :white_check_mark: | [WS2: Finite State Machine](https://github.com/akhan7/fss16groupG/blob/master/etc/FSMS) :white_check_mark:
 | 7 | | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/7/README.md) :white_check_mark:| [WS3: POM3-GA](https://github.com/akhan7/fss16groupG/blob/master/etc/Pom3_GA) :white_check_mark:
 | 8 | [Generic Experiments](https://github.com/akhan7/fss16groupG/tree/master/code/6/) :white_check_mark: | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/read/8/README.md) :white_check_mark:| [Performance](https://github.com/akhan7/fss16groupG/blob/master/etc/performance) :white_check_mark:
-| 9 | [Code 7](https://github.com/akhan7/fss16groupG/tree/master/code/7/) | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/code/7/README.md) | [Performance](https://github.com/akhan7/fss16groupG/blob/master/etc/performance) 
-| 10 | [Code 8](https://github.com/akhan7/fss16groupG/tree/master/code/8/) | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/code/8/README.md) | [Performance](https://github.com/akhan7/fss16groupG/blob/master/etc/performance) 
-| 11 | [Code 9](https://github.com/akhan7/fss16groupG/tree/master/code/9/) | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/code/9/README.md) | [Performance](https://github.com/akhan7/fss16groupG/blob/master/etc/performance)
+| 9 | [Code 7](https://github.com/akhan7/fss16groupG/tree/master/code/7/) | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/code/7/README.md) |
+| 10 | [Code 8](https://github.com/akhan7/fss16groupG/tree/master/code/8/) | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/code/8/README.md) |
+| 11 | [Code 9](https://github.com/akhan7/fss16groupG/tree/master/code/9/) | [Reading Assignment](https://github.com/akhan7/fss16groupG/blob/master/code/9/README.md) |
 
