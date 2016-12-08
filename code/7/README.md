@@ -1,4 +1,4 @@
-## Code7: early Termination
+## Early Termination Among DE, MWS and SA over DTLZ 7 model
 ### Running Instructions 
   1. Clone the github repository fss16groupG from https://github.com/akhan7/fss16groupG.git
   2. Navigate to ./fss16groupG/code/7
