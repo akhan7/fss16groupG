@@ -194,7 +194,7 @@ Based on the threats of validity and shortcomings of this project, this analysis
 4. We can also extend this comparative study to other algorithms which we studied in class.
 
 ### References
-[1] [http://e-collection.library.ethz.ch/eserv/eth:24696/eth-24696-01.pdf](http://e-collection.library.ethz.ch/eserv/eth:24696/eth-24696-01.pdf)
-[2] [https://github.com/txt/ase16/blob/master/src/stats.py](https://github.com/txt/ase16/blob/master/src/stats.py)
-[3] [https://github.com/txt/ase16/blob/master/doc/perform.md](https://github.com/txt/ase16/blob/master/doc/perform.md) 
-[4] [https://rdrr.io/cran/ScottKnott/man/ScottKnott-package.html](https://rdrr.io/cran/ScottKnott/man/ScottKnott-package.html)
+1. [http://e-collection.library.ethz.ch/eserv/eth:24696/eth-24696-01.pdf](http://e-collection.library.ethz.ch/eserv/eth:24696/eth-24696-01.pdf)
+2. [https://github.com/txt/ase16/blob/master/src/stats.py](https://github.com/txt/ase16/blob/master/src/stats.py)
+3. [https://github.com/txt/ase16/blob/master/doc/perform.md](https://github.com/txt/ase16/blob/master/doc/perform.md) 
+4. [https://rdrr.io/cran/ScottKnott/man/ScottKnott-package.html](https://rdrr.io/cran/ScottKnott/man/ScottKnott-package.html)
