@@ -74,7 +74,9 @@ The cumulative result across all the models and objectives is also shown:
 ![Final Result](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/results.png)
 
 ###Conclusions
-From the results it is clear that CDOM has proved to be a better fitness evaluator as compared to BDOM. The mechanism of raising to an exponent displayed by CDOM has shown it's "shouting" capabilities where there is a stark contrast between CDOM results. BDOM shows little variations in the results which proves why it is not a good idea to use it.  
+* From the results it is clear that CDOM has proved to be a better fitness evaluator as compared to BDOM. 
+* The mechanism of raising to an exponent displayed by CDOM has shown it's "shouting" capabilities where there is a stark contrast between CDOM results. 
+* BDOM shows little variations in the results which proves why it is not a good idea to use it.  
 
 
 ###Threats to Validity 
