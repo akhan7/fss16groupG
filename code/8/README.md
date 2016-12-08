@@ -3,7 +3,7 @@
 ### Running Instructions 
   1. Clone the github repository fss16groupG from https://github.com/akhan7/fss16groupG.git
   2. Navigate to ./fss16groupG/code/8
-  3. run testGA.py
+  3. run output.py
  
 ###Abstract
 The objective is to extend the implementation of GA done in the workshops to implement NSGA-II algorithm with the two types of fitness evaluations- Binary Domination with Cuboid Sorting and Continuous Domination. We test the algorithm by running it with each of the DTLZ 1, DTLZ 3, DTLZ 5 and DTLZ 7 models with 2, 4, 6, 8 objectives and with 10, 20, 40 decisions. Default parameters are used during the implementation and hypervolume is used as the performance measure. We repeat this experiment with 20 iterations.
@@ -41,7 +41,7 @@ We carry this study forward by evaluating the performance of this non dominated 
 ###Implementation 
   We implemeted the NSGA-II Algorithm on DTLZ 1 , 3, 5 , 7 each time with 2,4,6,8 objectives and 10, 20 , 40 decisions. 
   The default values of Genetic Algorithm have been used:
-  
+
     * Probabilty for mutation: 0.05 
     * Probabilty for crossover: 1
     * Number of candidates: 100 
