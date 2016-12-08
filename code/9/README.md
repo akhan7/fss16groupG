@@ -110,6 +110,7 @@ Comparing the tuned vs untuned GA, the hypervolume for the tuned GA is higher th
 * This experiment has enlightened us more about Genetic Algorithm and Differential Evolution as well as different topics around them. 
 * Thus, from our experiments, we conclude that Differential Evolution does improve the performance of a Genetic Algorithm. 
 * We also observed that generally if the objective space is less, the hypervolume is more.
+* Also if the GA is tuned, the results are way better than for untuned GAs.
 
 
 ### Threats to validity
