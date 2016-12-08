@@ -39,7 +39,12 @@ We carry this study forward by evaluating the performance of this non dominated 
 
 
 ###Implementation 
-
+  We implemeted the NSGA-II Algorithm on DTLZ 1 , 3, 5 , 7 each time with 2,4,6,8 objectives and 10, 20 , 40 decisions. 
+  Th default values of Genetic Algorithm have been used:
+    * Probabilty for mutation: 0.05 
+    * Probabilty for crossover: 1
+    * Number of candidates: 100 
+    * Number of generations: 10
 
 ###Results
 
