@@ -1,4 +1,11 @@
-This experiment aims to create an optimizer for an optimizer, i.e. is to tune Genetic Algorithm using Differential Evolution.
+Code9: This experiment aims to create an optimizer for an optimizer, i.e. is to tune Genetic Algorithm using Differential Evolution.
+
+Running Instructions
+
+1. Clone the github repository fss16groupG from https://github.com/akhan7/fss16groupG.git
+2. Navigate to ./fss16groupG/code/7
+3. run run.py
+
 
 ### Abstract
 
