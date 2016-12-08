@@ -41,6 +41,7 @@ We carry this study forward by evaluating the performance of this non dominated 
 ###Implementation 
   We implemeted the NSGA-II Algorithm on DTLZ 1 , 3, 5 , 7 each time with 2,4,6,8 objectives and 10, 20 , 40 decisions. 
   The default values of Genetic Algorithm have been used:
+  
     * Probabilty for mutation: 0.05 
     * Probabilty for crossover: 1
     * Number of candidates: 100 
@@ -69,8 +70,11 @@ As seen in the results below, there is a variation in the hypervolume. CDOM resu
 
 ![DTLZ 7 Results](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/r4.png)
 
+The cumulative result across all the models and objectives is also shown:
+![Final Result](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/results.png)
 
 ###Conclusions
+From the results it is clear that CDOM has proved to be a better fitness evaluator as compared to BDOM. The mechanism of raising to an exponent displayed by CDOM has shown it's "shouting" capabilities where there is a stark contrast between CDOM results. BDOM shows little variations in the results which proves why it is not a good idea to use it.  
 
 
 ###Threats to Validity 
@@ -88,16 +92,7 @@ As seen in the results below, there is a variation in the hypervolume. CDOM resu
 
 ###References:-
 
- 1. [Pseudo-code for Genetic Algorithm](http://www.cleveralgorithms.com/nature-inspired/evolution/genetic_algorithm.html)
- 2. Book : Clever Algorithms by Jason Brownlee
- 3. https://github.com/txt/mase/blob/master/lessthan.md
- 4. https://github.com/txt/mase/blob/master/STATS.md
- 5. https://en.wikipedia.org/wiki/Genetic_algorithm
-
-
-###Acknowledgements
-
-   The study uses code found here :
- 1.  This study uses code for Scott Knott given here : https://github.com/txt/mase/blob/master/src/doc/sk.py
- 2.  This study used Hypervolume functions given here: 
-     [Hypervolume Calculator](https://github.com/ai-se/storm/tree/master/PerformanceMetrics)
+ 1. A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II. Kalyanmoy Deb, Associate Member, IEEE, Amrit Pratap, Sameer Agarwal, and T. Meyarivan
+ 2. http://people.ee.ethz.ch/~sop/download/supplementary/testproblems/dtlz1/index.php
+ 3. https://github.com/txt/ase16/blob/master/doc/stats.md
+ 4. https://github.com/ase16-ta/ga
