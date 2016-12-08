@@ -124,13 +124,7 @@ In the future we would like to improve the performance of the algorithm by impro
 
 
 ### Conclusion
-The experiment shows that Differential Evolution has indeed improved the quality of input parameters to the GA. This is because the algorithm keeps improving the pool of candidates when the neighbor energy is better than the current energy. When the underlying optimizer is run multiple times using DE we are able to achieve better results by tuning the input after each run. This can greatly reduce the running time of algorithm by reducing the number of generations and the size of candidate pools in most cases.
-
-Implementing the Genetic Algorithm and Differential Evolution has given us deep insights into general properties and characteristics Multi-objective evolutionary algorithms. Through this activity we have been introduced to various research surrounding this topic. We have also become aware of the common challenges faced during the implementation and debugging phases and have been able to learn about the ways to overcome these challenges. Our algorithm is a humble attempt to implement the popular MOEA, Genetic Algorithm and use DE to tune its input parameters to extract . There are quite a few improvements that we plan to do on top of our current work. Some of them are discussed below.
-
-As a part of future work, we plan to focus on improving the efficiency and run-time of Genetic Algorithm. The number of generations is also a parameter that can affect the performance of GA and we plan to tune this parameter from DE as well.
-
-Since boolean domination has its own drawbacks (as discussed previously), we plan to integrate continuous domination as a part of the select procedure. We also to improve the aggregation method by trying out different strategies such as weighted-sum approach and target vector optimization[5]. There also a lot of improvement to be done in improving the time taken for the selection procedure by applying some heuristics to the process.
+This experiment has enlightened us more about Genetic Algorithm and Differential Evolution as well as different topics around them. Thus, from our experiments, we conclude that Differential Evolution does improve the performance of a Genetic Algorithm. We also observed that generally if the objective space is less, the hypervolume is more.
 
 ### References
 [https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html](https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html)
