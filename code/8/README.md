@@ -100,6 +100,9 @@ The cumulative result across all the models and objectives is also shown:
 ###References:-
 
  1. A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II. Kalyanmoy Deb, Associate Member, IEEE, Amrit Pratap, Sameer Agarwal, and T. Meyarivan
- 2. http://people.ee.ethz.ch/~sop/download/supplementary/testproblems/dtlz1/index.php
- 3. https://github.com/txt/ase16/blob/master/doc/stats.md
- 4. https://github.com/ase16-ta/ga
+ 2. Elitist Non-Dominated Sorting GA-II (NSGA-II) as a Parameter-less Multi-Objective Genetic Algorithm. Khoa Duc Tran. IEEE SouthEast Conference Proceedings, 2005
+ 3. http://people.ee.ethz.ch/~sop/download/supplementary/testproblems/dtlz1/index.php
+ 4. https://github.com/txt/ase16/blob/master/doc/stats.md
+ 5. https://github.com/ase16-ta/ga
+ 6. https://github.com/txt/ase16/blob/master/doc/perform.md
+ 7. https://github.com/txt/ase16/blob/master/doc/nsga2spea2.md
