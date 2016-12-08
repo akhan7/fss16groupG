@@ -1,4 +1,4 @@
-## Homework 8 Implemment NSGA-II
+## Implementation and validation of NSGA-II algorithm
 
 ### Running Instructions 
   1. Clone the github repository fss16groupG from https://github.com/akhan7/fss16groupG.git
@@ -47,7 +47,7 @@ We carry this study forward by evaluating the performance of this non dominated 
     * Number of candidates: 100 
     * Number of generations: 10
 
-###Results
+### Results
   Across all DTLZ models the scores between binary domination and continuous domination are fairly similar. The hyper-volume averages below have been normalized by dividing each hyper-volume by the number of objectives that were tested as the hypervolume would grow with an increased number of objectives. Even after normalized, most of the hyper-volume scores were better for higher number of objectives.
 
 #### DTLZ 1
@@ -73,20 +73,20 @@ As seen in the results below, there is a variation in the hypervolume. CDOM resu
 The cumulative result across all the models and objectives is also shown:
 ![Final Result](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/results.png)
 
-###Conclusions
+### Conclusions
 * From the results it is clear that CDOM has proved to be a better fitness evaluator as compared to BDOM. 
 * The mechanism of raising to an exponent displayed by CDOM has shown it's "shouting" capabilities where there is a stark contrast between CDOM results. 
 * BDOM shows little variations in the results which proves why it is not a good idea to use it.  
 
 
-###Threats to Validity 
+### Threats to Validity 
   1. To ensure the code running, we had to tweak and change the number of generations as well as the number of candidates. Based on these values the results were obtained above, which should be avoided.
   2. Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
   3. Binary domination may not always work as well as we expect it to. Consider a not-so-common scenario where no candidate binary-dominates another candidate in the population. In such cases, how do we determine who the fittest individuals are?
   4. As discussed earlier, we use the hypervolume as a metric of "goodness" of the best pareto frontier found. While this seems to be a promising approach, there is still much debate and ongoing research in this area.
 
 
-###Future Work
+### Future Work
   1.  We could generate multiple instances of the default values and generate the graphs for those and then decide which set of values work the best.
   2.  We could use other performance measures apart from hypervolume such as spread or IQR as well as the time for which the code runs and then do a comprehensive analysis between GA and NSGA-II.
   3.  We could use test the algorithm with other models and see how the performance of the algorithm changes with different models.
