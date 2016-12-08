@@ -5,10 +5,10 @@
   2. Navigate to ./fss16groupG/code/8
   3. run output.py
  
-###Abstract
+### Abstract
 The objective is to extend the implementation of GA done in the workshops to implement NSGA-II algorithm with the two types of fitness evaluations- Binary Domination with Cuboid Sorting and Continuous Domination. We test the algorithm by running it with each of the DTLZ 1, DTLZ 3, DTLZ 5 and DTLZ 7 models with 2, 4, 6, 8 objectives and with 10, 20, 40 decisions. Default parameters are used during the implementation and hypervolume is used as the performance measure. We repeat this experiment with 20 iterations.
 
-###Introduction
+### Introduction
 **Genetic algorithm** is a meta-heuristic algorithm which is inspired from natural selection. It traditionally works on binary data but can be adopted for other data types as well. It uses techniques like Cross over, mutation and Elitism to evaluate fitness generate better population of candidate solutions.
 
 **NSGA-II** is a standard genetic algorithm with state-of-the-art selection operator for multi-objectives. The algorithm for NSGA-II is given as:
@@ -75,16 +75,19 @@ The cumulative result across all the models and objectives is also shown:
 
 ### Conclusions
 * From the results it is clear that CDOM has proved to be a better fitness evaluator as compared to BDOM. 
-* The mechanism of raising to an exponent displayed by CDOM has shown it's "shouting" capabilities where there is a stark contrast between CDOM results. 
+* The mechanism of raising to an exponent displayed by CDOM has shown it's "shouting" capabilities where there is a stark contrast between CDOM results.
+* There is little variation in the value of hypervolume for DTLZ 1 and 3.
+* Difference in value of hypervolume of shows up for DTLZ 5 and 7, with DTLZ 7 exhibiting a higher hypervolume value for the same objective and decision values.
 * BDOM shows little variations in the results which proves why it is not a good idea to use it.
 * Run time of the code depends on the number of generations- more the number of generations, more exponential the rise in code runtime.
 
 
 ### Threats to Validity 
- 1. To ensure the code running, we had to tweak and change the number of generations as well as the number of candidates. Based on these values the results were obtained above, which should be avoided.
- 2. Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
- 3. Binary domination may not always work as well as we expect it to. Consider a not-so-common scenario where no candidate binary-dominates another candidate in the population. In such cases, how do we determine who the fittest individuals are?
- 4. As discussed earlier, we use the hypervolume as a metric of "goodness" of the best pareto frontier found. While this seems to be a promising approach, there is still much debate and ongoing research in this area.
+ 1. To ensure the code running, we had to tweak and change the number of generations as well as the number of candidates. Based on these values the results were obtained above, which should be avoided.w
+ 2. More research needs to be done on why there wasn't a difference in hypervolume values for DTLZ 1 and 3. The code needs to be run more iterations with different values so this reason can be better explained.
+ 3. Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
+ 4. Binary domination may not always work as well as we expect it to. Consider a not-so-common scenario where no candidate binary-dominates another candidate in the population. In such cases, how do we determine who the fittest individuals are?
+ 5. As discussed earlier, we use the hypervolume as a metric of "goodness" of the best pareto frontier found. While this seems to be a promising approach, there is still much debate and ongoing research in this area.
 
 
 ### Future Work
