@@ -107,15 +107,15 @@ Comparing the tuned vs untuned GA, the hypervolume for the tuned GA is higher th
 ![DTLZ 7 Comparison](https://github.com/akhan7/fss16groupG/blob/master/code/9/image/e4.jpeg)
 
 ### Threats to validity
-* The pareto frontier in this experiment uses a lot of time, resulting in increased time complexity.
-* The BDOM, used in the experiment, might not be that effective for every kind of data.
-* If different model is used, the results might not be the same.
+1. The pareto frontier in this experiment uses a lot of time, resulting in increased time complexity.
+2. The BDOM, used in the experiment, might not be that effective for every kind of data.
+3. If different model is used, the results might not be the same.
 
 ### Future work
-* In the future we would like to improve the performance of the algorithm by improving the time complexity of the algorithm.
-* We would also suggest including parallel running of processes to increase the efficiency. 
-* Also memory required for the algorithm can be optimized. 
-* Also we intend to improve the results by using CDOM instead of BDOM and by performing more experiments. 
+1. In the future we would like to improve the performance of the algorithm by improving the time complexity of the algorithm.
+2. We would also suggest including parallel running of processes to increase the efficiency. 
+3. Also memory required for the algorithm can be optimized. 
+4. Also we intend to improve the results by using CDOM instead of BDOM and by performing more experiments. 
 
 
 ### Conclusion
