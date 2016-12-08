@@ -1,12 +1,7 @@
 """
-
 ## Hyptotheis Testing Stuff
-
-
 ### Standard Stuff
-
 #### Standard Headers
-
 """
 from __future__ import division
 import sys
@@ -17,9 +12,7 @@ from pdb import set_trace
 
 sys.dont_write_bytecode = True
 """
-
 #### Standard Utils
-
 """
 
 
@@ -43,9 +36,7 @@ class o():
     return [k for k in sorted(i.__dict__.keys())
             if not "_" in k]
 """
-
 Misc functions:
-
 """
 rand = random.random
 any = random.choice
@@ -119,14 +110,10 @@ def _tileX():
   nums = [random.random() ** 2 for _ in range(100)]
   print xtile(nums, lo=0, hi=1.0, width=25, show=" %0.3E")
 """
-
 ### Standard Accumulator for Numbers
-
 Note the _lt_ method: this accumulator can be sorted by median values.
-
 Warning: this accumulator keeps _all_ numbers. Might be better to use
 a bounded cache.
-
 """
 
 
@@ -186,9 +173,7 @@ class Num:
 
 
 """
-
 ### The A12 Effect Size Test
-
 """
 
 
@@ -250,7 +235,6 @@ def _a12():
 
 
 """Output:
-
 ````
 n   a12(fast)       a12(slow)       tfast / tslow
 --- --------------- -------------- --------------
@@ -262,23 +246,16 @@ n   a12(fast)       a12(slow)       tfast / tslow
 3200 0.49           0.49             109
 6400 0.5            0.5              244
 ````
-
-
 ## Non-Parametric Hypothesis Testing
-
 The following _bootstrap_ method was introduced in
 1979 by Bradley Efron at Stanford University. It
 was inspired by earlier work on the
 jackknife.
 Improved estimates of the variance were [developed later][efron01].
-
 [efron01]: http://goo.gl/14n8Wf "Bradley Efron and R.J. Tibshirani. An Introduction to the Bootstrap (Chapman & Hall/CRC Monographs on Statistics & Applied Probability), 1993"
-
-
 To check if two populations _(y0,z0)_
 are different, many times sample with replacement
 from both to generate _(y1,z1), (y2,z2), (y3,z3)_.. etc.
-
 """
 
 
@@ -291,18 +268,14 @@ def sampleWithReplacement(lst):
     return lst[int(any(len(lst)))]
   return [one(lst) for _ in lst]
 """
-
-
 Then, for all those samples,
  check if some *testStatistic* in the original pair
 hold for all the other pairs. If it does more than (say) 99%
 of the time, then we are 99% confident in that the
 populations are the same.
-
 In such a _bootstrap_ hypothesis test, the *some property*
 is the difference between the two populations, muted by the
 joint standard deviation of the populations.
-
 """
 
 
@@ -321,15 +294,12 @@ def testStatistic(y, z):
     delta = delta / ((s1 / y.n + s2 / z.n) ** 0.5)
   return delta
 """
-
 The rest is just details:
-
 + Efron advises
   to make the mean of the populations the same (see
   the _yhat,zhat_ stuff shown below).
 + The class _total_ is a just a quick and dirty accumulation class.
 + For more details see [the Efron text][efron01].
-
 """
 
 
@@ -366,9 +336,7 @@ def bootstrap(y0, z0, conf=0.01, b=1000):
       bigger += 1
   return bigger / b < conf
 """
-
 #### Examples
-
 """
 
 
@@ -395,27 +363,21 @@ def _bootstraped():
   print worker(mu1=10.1, sigma1=10,
                mu2=10.8, sigma2=1)
 """
-
 Output:
-
 ````
 _bootstraped()
-
 (1000, 10, 10, 100, 10, 'different')
 (1000, 10.1, 1, 10.2, 1, 'same')
 (1000, 10.1, 1, 10.8, 1, 'different')
 (1000, 10.1, 10, 10.8, 1, 'same')
 ````
-
 Warning- the above took 8 seconds to generate since we used 1000 bootstraps.
 As to how many bootstraps are enough, that depends on the data. There are
 results saying 200 to 400 are enough but, since I am  suspicious man, I run it for 1000.
-
 Which means the runtimes associated with bootstrapping is a significant issue.
 To reduce that runtime, I avoid things like an all-pairs comparison of all treatments
 (see below: Scott-knott).  Also, BEFORE I do the boostrap, I first run
 the effect size test (and only go to bootstrapping in effect size passes:
-
 """
 
 
@@ -424,12 +386,8 @@ def different(l1, l2):
   return a12(l2, l1) and bootstrap(l1, l2)
 
 """
-
 ## Saner Hypothesis Testing
-
 The following code, which you should use verbatim does the following:
-
-
 + All treatments are clustered into _ranks_. In practice, dozens
   of treatments end up generating just a handful of ranks.
 + The numbers of calls to the hypothesis tests are minimized:
@@ -440,15 +398,11 @@ The following code, which you should use verbatim does the following:
           + All hypothesis tests are non-parametric and include (1) effect size tests
             and (2) tests for statistically significant numbers;
           + Slow bootstraps are executed  if the faster _A12_ tests are passed;
-
 In practice, this means that the hypothesis tests (with confidence of say, 95%)
 are called on only a logarithmic number of times. So...
-
 + With this method, 16 treatments can be studied using less than _&sum;<sub>1,2,4,8,16</sub>log<sub>2</sub>i =15_ hypothesis tests  and confidence _0.99<sup>15</sup>=0.86_.
 + But if did this with the 120 all-pairs comparisons of the 16 treatments, we would have total confidence _0.99<sup>120</sup>=0.30.
-
 For examples on using this code, see _rdivDemo_ (below).
-
 """
 
 
@@ -540,11 +494,8 @@ def leftRight(parts, epsilon=0.01):
         yield i, left, rights[i]
       left += one
 """
-
 ## Putting it All Together
-
 Driver for the demos:
-
 """
 
 
