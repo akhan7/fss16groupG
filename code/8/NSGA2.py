@@ -212,6 +212,5 @@ def nsga2(problem = DTLZ1(), pop_size=20, gens=3, mutation=0.05, crossover_rate=
     union = population + children
     fronts = fast_non_dominated_sort(problem,union,dom_func)
     parents = select_parents(problem,fronts,pop_size)
-    print("")
     hypervolume = norm_hypervol(hv(parents, len(problem.objectives)), len(problem.objectives))
     return hypervolume
