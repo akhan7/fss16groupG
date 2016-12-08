@@ -79,9 +79,16 @@ We use “boolean domination”, or commonly known as bdom, when comparing the i
 
 Aggregation methods combine the objectives into a scalar function that is used for fitness calculation. On the other hand, defining the goal function in this way requires profound domain knowledge that is often not available. We have used a pure aggregation method which is a sum of all the objective scores. This may not be the best aggregation in every case.
 
+Consideration of metrics other than Hyper volume could lead to different results
+Results may vary if other models are used for tuning the GA parameters
+The efficiency of boolean domination in differentiating certain generations
+
 ### Future work
 Future work will definitely involve improving the performance of the algorithm as a whole by introducing parallism for runs. DE for different models can also be run in parallel to generate different GA parameters as these are independent.Other work in this area can include improving the results for higher order DTLZ objective functions. The results can possibly be improved by performing some preprocessing with a less intensive algorithm and generating a somehwhat optimal initial population instead of randomly generating the initial population instead of tweaking the GA parameters. Another possible improvement is experimenting with different type1 operators.
 
+Improving on the run time and memory requirements of the program
+Exploring techniques other than DE to optimize GA parameters
+Replacing boolean domination with continuous dominaition
 
 ### Conclusion
 The experiment shows that Differential Evolution has indeed improved the quality of input parameters to the GA. This is because the algorithm keeps improving the pool of candidates when the neighbor energy is better than the current energy. When the underlying optimizer is run multiple times using DE we are able to achieve better results by tuning the input after each run. This can greatly reduce the running time of algorithm by reducing the number of generations and the size of candidate pools in most cases.
