@@ -1,4 +1,4 @@
-### Code9: This experiment aims to create an optimizer for an optimizer, i.e. is to tune Genetic Algorithm using Differential Evolution.
+### Tuning Genetic Algorithm using Differential Evolution (Optimizing an optimizer)
 
 ### Running Instructions
 
@@ -50,9 +50,10 @@ In this experiment we do the following
 
 ### Implementation
 
-1. The model used is DLTZ1 with 2 objectives and 10 decisions
-2. Genetic Algorithm is developed to optimize the objectives of the above model. From the finally obtained frontier, the distance From Hell is calculated by finding the nearest neighbor in the baseline frontier and determining the distance between these points. The mean of all these distances is used as the 
-aggregate score of the GA for comparison basis.
+1. The model used is DLTZ 1, 3, 5 and 7 with 2, 4, 6 objectives and 10, 20 and 40 decisions.
+
+2. Genetic Algorithm is developed to optimize the objectives of the above model. From the finally obtained frontier, the distance From Hell is calculated by finding the nearest neighbor in the baseline frontier and determining the distance between these points. The mean of all these distances is used as the aggregate score of the GA for comparison basis.
+
 3. A model encompassing the GA parameters in written as follows. 
 
 ```python
@@ -67,15 +68,14 @@ aggregate score of the GA for comparison basis.
     base_max = b_max
 ```
 
-4. The Differential Evolution model is implemented which works on the GA candidates. It generates an
-initial frontier of candidates, and then iterates over the number of repeats trying to mutate the parameters of configuration so as to obtain the maximum distance from Hell (farther points result in more optimized objectives). Type 1 and Type 2 comparators are used for 
-candidate selection and early termination of DE.
+4. The Differential Evolution model is implemented which works on the GA candidates. It generates an initial frontier of candidates, and then iterates over the number of repeats trying to mutate the parameters of configuration so as to obtain the maximum distance from Hell (farther points result in more optimized objectives).
 
 5. The final result is the best GA configuration, with the corresponding distance value, and the final populated frontier of configurations ranked based on the distance metric.
-6. The best configuration is fed into GA optimizer of DTLZ1, to find the resulting mean distance and the solution obtained is compared with the solution obtained from untuned GA with default parameters.
+
+6. The best configuration is fed into GA optimizer for optimizing the given models to find the resulting mean distance and the solution obtained is compared with the solution obtained from untuned GA with default parameters.
 
 ### Results
-Genetic Algorithm's parameters have been tuned with the help of DE. As we'll see from the graphs below, the tuned GA performs significantly better as compared to the untuned GA.
+Genetic Algorithm's parameters have been tuned with the help of DE. Normalized hypervolume is used as the performance measure to compare the tuned and untuned GA. We've plotted graphs depicting the normalized hypervolume values for tuned GA's for each of the models. We've also compared the tuned and untuned GA's by plotting and comparing their corresponding hypervalues. As we'll see from the graphs, the tuned GA performs significantly better as compared to the untuned GA.
 
 #### Tuned GA (DTLZ 1)
 The graph below shows the normalized hypervolume of the tuned GA tested with DTLZ 1 model. As the number of objectives decrease, the hypervolume also shows a significant increase. 
