@@ -120,15 +120,15 @@ Results may vary if other models are used for tuning the GA parameters
 The efficiency of boolean domination in differentiating certain generations
 
 ### Future work
-In the future we would like to improve the performance of the algorithm by improving the time complexity of the algorithm.
-We would also suggest including parallel running of processes to increase the efficiency. 
-Also memory required for the algorithm can be optimized. 
-Also we intend to improve the results by using CDOM instead of BDOM and by performing more experiments. 
+*In the future we would like to improve the performance of the algorithm by improving the time complexity of the algorithm.
+*We would also suggest including parallel running of processes to increase the efficiency. 
+*Also memory required for the algorithm can be optimized. 
+*Also we intend to improve the results by using CDOM instead of BDOM and by performing more experiments. 
 
 
 ### Conclusion
-This experiment has enlightened us more about Genetic Algorithm and Differential Evolution as well as different topics around them. Thus, from our experiments, we conclude that Differential Evolution does improve the performance of a Genetic Algorithm. 
-We also observed that generally if the objective space is less, the hypervolume is more.
+*This experiment has enlightened us more about Genetic Algorithm and Differential Evolution as well as different topics around them. *Thus, from our experiments, we conclude that Differential Evolution does improve the performance of a Genetic Algorithm. 
+*We also observed that generally if the objective space is less, the hypervolume is more.
 
 ### References
 [https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html](https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html)
