@@ -1,14 +1,12 @@
 from __future__ import division
 import random
 import math
-from common import prerun_each_obj
 from candidate import Candidate
 from stats import a12
 """ This contains the optimizers """
 
 
 def de(model, frontier_size=10, cop=0.4, ea=0.5, max_tries=100, threshold=0.01, era_size=10, era0=None, lives=5):
-    # normalizers = prerun_each_obj(model, runs=10000)
     out = []
     print max_tries
     print era_size
@@ -17,57 +15,15 @@ def de(model, frontier_size=10, cop=0.4, ea=0.5, max_tries=100, threshold=0.01, 
     frontier_size = era_size
 
     energy = model.aggregate
-
-    # def energy(candidate, eval_func=model.eval, normalizers=normalizers):
-    #     # This evaluates the objs and stores them candidate.scores
-    #     eval_func(candidate)
-    #     # Just for fun
-    #     normalized_scores = [normalize(x) for normalize, x in zip(normalizers, candidate.scores)]
-    #     # The distance of score of each objective from hell
-    #     hell_dist = [(1 - x) for x in normalized_scores]
-
-    #     sum_of_squares = sum([x ** 2 for x in hell_dist])
-
-    #     energy = 1 - (math.sqrt(sum_of_squares) / math.sqrt(len(hell_dist)))
-
-    #     return energy
-
     def type1(can1, can2):
         return (energy(can1) < energy(can2))
 
     def type2(era1, era2):
-        # a12 returns times that lst1 is greater than lst2
-        # total = 0
-        # n = 0
-        # for obj_scores1, obj_scores2 in zip(era1, era2):
-        #     # If this is 1, that means era1 is greater more often
-        #     # If minimizing, this means era1 is worse
-        #     total += a12(obj_scores1, obj_scores2)
-        #     n += 1
-        # return (total / n >= 0.5)
-
-        # Currently returns true if even one of the objectives have improved
-        # print "here:" + str(len(era2))
-        # print "*****#############*************"
+        
         for index, objective in enumerate(era2):
-            # print "comparing:\n" + str(era1[index])
-            # print "and\n"
-            # print str(objective)
-            # print "******"
             a12_score = a12(era1[index], objective)
-            # print "######"
-            # print a12_score
-            # print "######"
             if (a12_score >= 0.56):
-                # print "######"
-                # print objective
-                # print era1[index]
-                # print a12_score
-                # print "######"
                 return True
-        # print "######"
-        # print a12_score
-        # print "######"
         return False
 
     frontier = []
@@ -98,8 +54,6 @@ def de(model, frontier_size=10, cop=0.4, ea=0.5, max_tries=100, threshold=0.01, 
         for index, score in enumerate(obj_scores):
             curr_era[index] += [score]
 
-    # Currently treating candidates as having only one objective i.e. energy
-    # which we're minimizing
     eras = [curr_era]
     curr_era = [[] for _ in model.objectives()]
 
@@ -109,7 +63,6 @@ def de(model, frontier_size=10, cop=0.4, ea=0.5, max_tries=100, threshold=0.01, 
 
     for j in range(repeat):
 
-        # if j % era_size == 0:
         out += ["\n" + str(best_score) + " "]
 
         total, n = de_update(frontier, cop, ea, energy, out, model.decisions())
@@ -126,7 +79,6 @@ def de(model, frontier_size=10, cop=0.4, ea=0.5, max_tries=100, threshold=0.01, 
         for can in frontier:
             model.eval(can)
             obj_scores = [x for x in can.scores]
-            # print "obj_scores_len:" + str(len(obj_scores))
             for index, score in enumerate(obj_scores):
                 curr_era[index] += [score]
 
@@ -143,9 +95,6 @@ def de(model, frontier_size=10, cop=0.4, ea=0.5, max_tries=100, threshold=0.01, 
                     out += ["\nNo more Lives"]
                     break
 
-    # print ''.join(out)
-    # print "\nNumber of repeats:" + str(j + 1)
-    # print "Best Score:" + str(best_score)
     return frontier
 
 
