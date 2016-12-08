@@ -1,14 +1,14 @@
-## Homework 8 Implemment NSGA-II
+## Implementation and validation of NSGA-II algorithm
 
 ### Running Instructions 
   1. Clone the github repository fss16groupG from https://github.com/akhan7/fss16groupG.git
   2. Navigate to ./fss16groupG/code/8
-  3. run testGA.py
+  3. run output.py
  
-###Abstract
+### Abstract
 The objective is to extend the implementation of GA done in the workshops to implement NSGA-II algorithm with the two types of fitness evaluations- Binary Domination with Cuboid Sorting and Continuous Domination. We test the algorithm by running it with each of the DTLZ 1, DTLZ 3, DTLZ 5 and DTLZ 7 models with 2, 4, 6, 8 objectives and with 10, 20, 40 decisions. Default parameters are used during the implementation and hypervolume is used as the performance measure. We repeat this experiment with 20 iterations.
 
-###Introduction
+### Introduction
 **Genetic algorithm** is a meta-heuristic algorithm which is inspired from natural selection. It traditionally works on binary data but can be adopted for other data types as well. It uses techniques like Cross over, mutation and Elitism to evaluate fitness generate better population of candidate solutions.
 
 **NSGA-II** is a standard genetic algorithm with state-of-the-art selection operator for multi-objectives. The algorithm for NSGA-II is given as:
@@ -41,43 +41,68 @@ We carry this study forward by evaluating the performance of this non dominated 
 ###Implementation 
   We implemeted the NSGA-II Algorithm on DTLZ 1 , 3, 5 , 7 each time with 2,4,6,8 objectives and 10, 20 , 40 decisions. 
   The default values of Genetic Algorithm have been used:
-  
+
     * Probabilty for mutation: 0.05 
     * Probabilty for crossover: 1
     * Number of candidates: 100 
     * Number of generations: 10
 
-###Results
-  
+### Results
+  Across all DTLZ models the scores between binary domination and continuous domination are fairly similar. The hyper-volume averages below have been normalized by dividing each hyper-volume by the number of objectives that were tested as the hypervolume would grow with an increased number of objectives. Even after normalized, most of the hyper-volume scores were better for higher number of objectives.
+
+#### DTLZ 1
+As seen in the results below, with increase in objectives there's not any difference in the hypervolume, even after normalizing across objectives. For this problem set the number of decisions does not play a significant role in the difference of scores.
+
+![DTLZ 1 Results](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/r1.png)
+
+#### DTLZ 3
+As seen in the results below, with increase in objectives there's not any difference in the hypervolume, even after normalizing across objectives. For this problem set the number of decisions does not play a significant role in the difference of scores. 
+
+![DTLZ 3 Results](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/r2.png)
+
+#### DTLZ 5
+As seen in the results below, there is a variation in the hypervolume. CDOM results show much more variation as compared to BDOM which is indicative of it being a better fitness evaluation criteria.
+
+![DTLZ 5 Results](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/r3.png)
+
+#### DTLZ 7
+As seen in the results below, there is a variation in the hypervolume. CDOM results show much more variation as compared to BDOM which is indicative of it being a better fitness evaluation criteria.
+
+![DTLZ 7 Results](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/r4.png)
+
+The cumulative result across all the models and objectives is also shown:
+![Final Result](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/results.png)
+
+### Conclusions
+* From the results it is clear that CDOM has proved to be a better fitness evaluator as compared to BDOM. 
+* The mechanism of raising to an exponent displayed by CDOM has shown it's "shouting" capabilities where there is a stark contrast between CDOM results.
+* There is little variation in the value of hypervolume for DTLZ 1 and 3.
+* Difference in value of hypervolume of shows up for DTLZ 5 and 7, with DTLZ 7 exhibiting a higher hypervolume value for the same objective and decision values.
+* BDOM shows little variations in the results which proves why it is not a good idea to use it.
+* Run time of the code depends on the number of generations- more the number of generations, more exponential the rise in code runtime.
 
 
-###Conclusions
+### Threats to Validity 
+ 1. To ensure the code running, we had to tweak and change the number of generations as well as the number of candidates. Based on these values the results were obtained above, which should be avoided.w
+ 2. More research needs to be done on why there wasn't a difference in hypervolume values for DTLZ 1 and 3. The code needs to be run more iterations with different values so this reason can be better explained.
+ 3. Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
+ 4. Binary domination may not always work as well as we expect it to. Consider a not-so-common scenario where no candidate binary-dominates another candidate in the population. In such cases, how do we determine who the fittest individuals are?
+ 5. As discussed earlier, we use the hypervolume as a metric of "goodness" of the best pareto frontier found. While this seems to be a promising approach, there is still much debate and ongoing research in this area.
 
 
-###Threats to Validity 
-  1.  Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
-  2.  Binary domination may not always work as well as we expect it to. Consider a not-so-common scenario where no candidate binary-dominates another candidate in the population. In such cases, how do we determine who the fittest individuals are?
-  3.  As discussed earlier, we use the hypervolume as a metric of "goodness" of the best pareto frontier found. While this seems to be a promising approach, there is still much debate and ongoing research in this area.
-
-
-###Future Work
-  1.  We could generate multiple instances of the default values and generate the graphs for those and then decide which set of values work the best.
-  2.  We could use other performance measures apart from hypervolume such as spread or IQR as well as the time for which the code runs and then do a comprehensive analysis between GA and NSGA-II.
-  3.  We could use test the algorithm with other models and see how the performance of the algorithm changes with different models.
+### Future Work
+ 1. We have evaluated NSGA-II in a vacuum. Comparing the results of NSGA-II with GA (it's predeccesor) as well as with NPGA and MOGA should give very interesting results. This will truly be a good test to evaluate the strengths and weaknesses of these evolutionary algorithms and also enable us to see their behavior when tested with different models and objective and decision spaces.
+ 2. We could generate multiple instances of the default values and generate the graphs for those and then decide which set of values work the best.
+ 3.  We could use other performance measures apart from hypervolume such as spread or intergenerational distance as well as the time for which the code runs and then do a comprehensive analysis between GA and NSGA-II.
+ 4.  We could use test the algorithm with other models and see how the performance of the algorithm changes with different models.
 
 
 ###References:-
 
- 1. [Pseudo-code for Genetic Algorithm](http://www.cleveralgorithms.com/nature-inspired/evolution/genetic_algorithm.html)
- 2. Book : Clever Algorithms by Jason Brownlee
- 3. https://github.com/txt/mase/blob/master/lessthan.md
- 4. https://github.com/txt/mase/blob/master/STATS.md
- 5. https://en.wikipedia.org/wiki/Genetic_algorithm
-
-
-###Acknowledgements
-
-   The study uses code found here :
- 1.  This study uses code for Scott Knott given here : https://github.com/txt/mase/blob/master/src/doc/sk.py
- 2.  This study used Hypervolume functions given here: 
-     [Hypervolume Calculator](https://github.com/ai-se/storm/tree/master/PerformanceMetrics)
+ 1. A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II. Kalyanmoy Deb, Associate Member, IEEE, Amrit Pratap, Sameer Agarwal, and T. Meyarivan
+ 2. Elitist Non-Dominated Sorting GA-II (NSGA-II) as a Parameter-less Multi-Objective Genetic Algorithm. Khoa Duc Tran. IEEE SouthEast Conference Proceedings, 2005
+ 3. http://people.ee.ethz.ch/~sop/download/supplementary/testproblems/dtlz1/index.php
+ 4. https://github.com/txt/ase16/blob/master/doc/stats.md
+ 5. https://github.com/ase16-ta/ga
+ 6. https://github.com/txt/ase16/blob/master/doc/perform.md
+ 7. https://github.com/txt/ase16/blob/master/doc/nsga2spea2.md

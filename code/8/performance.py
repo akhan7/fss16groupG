@@ -2,9 +2,6 @@ from __future__ import print_function, division
 import pom3_ga, sys
 import pickle
 
-# TODO 1: Enter your unity ID here
-__author__ = "smshah4"
-
 def normalize(problem, points):
   """
   Normalize all the objectives
@@ -16,7 +13,6 @@ def normalize(problem, points):
     objs = []
     for i, o in enumerate(problem.evaluate(point)):
       low, high = meta[i].low, meta[i].high
-      # TODO 3: Normalize 'o' between 'low' and 'high'; Then add the normalized value to 'objs'
       if high == low: objs.append(0); continue;
       objs.append((o-low)/(high-low));
     all_objs.append(objs)
@@ -25,10 +21,6 @@ def normalize(problem, points):
   """
 Performing experiments for [5, 10, 50] generations.
 """
-#problem = pom3_ga.POM3()
-#pop_size = 10
-#repeats = 10
-#test_gens = [5, 10, 50]
 
 def save_data(file_name, data):
   """
@@ -98,7 +90,6 @@ def make_reference(problem, *fronts):
     for i, obj in enumerate(problem.objectives):
       gt, lt = pom3_ga.gt, pom3_ga.lt
       better = lt
-      # TODO 3: Use the varaibles declared above to check if one dominates two
       if better(one[i],two[i]) :
           dominates = True
       if (one[i] != two[i]):
@@ -114,11 +105,6 @@ def make_reference(problem, *fronts):
   reference = [tup[1] for tup in sorted(fitnesses, reverse=True)]
   return reference[:retain_size]
 
-#make_reference(problem, tests[5][0], tests[10][0], tests[50][0])
-#print(tests[50][0])
-#print()
-#print()
-
 def eucledian(one, two):
   """
   Compute Eucledian Distance between
@@ -128,13 +114,7 @@ def eucledian(one, two):
   :param two: Vector 2
   :return:
   """
-  # TODO 4: Code up the eucledian distance. https://en.wikipedia.org/wiki/Euclidean_distance
   dist = 0
-  #for i in xrange(len(one)) :
-#      dist = dist + (one[i] - two[i])**2
-
- # dist = dist**0.5
-
 
   return (sum([(o-t)**2 for o,t in zip(one,two)])) / len(one) ** 0.5
 
@@ -173,17 +153,11 @@ def spread(obtained, ideals):
   for i in range(len(s_obtained)-1):
     distances.append(eucledian(s_obtained[i], s_obtained[i+1]))
   d_bar = sum(distances)/len(distances)
-  # TODO 5: Compute the value of spread using the definition defined in the previous cell.
   d_sum  = sum([abs(d_i - d_bar) for d_i in distances])
   delta = (d_f + d_l + d_sum)/ (d_f + d_l + (n-1) * d_bar)
   return delta
 
 
-#ref = make_reference(problem, tests[5][0], tests[10][0], tests[50][0])
-
-# print(spread(tests[5][0], ref))
-# print(spread(tests[10][0], ref))
-# print(spread(tests[50][0], ref))
 
 def igd(obtained, ideals):
   """
@@ -193,19 +167,8 @@ def igd(obtained, ideals):
   :param ideals: Ideal pareto front
   :return:
   """
-  # TODO 6: Compute the value of IGD using the definition defined in the previous cell.
   igd_val = sum([closest(ideal, obtained)[0] for ideal in ideals])/len(ideals)
   return igd_val
-
-# ref = make_reference(problem, tests[5][0], tests[10][0], tests[50][0])
-#
-# print(igd(tests[5][0], ref))
-# print(igd(tests[10][0], ref))
-# print(igd(tests[50][0], ref))
-
-
-import sk
-sk = reload(sk)
 
 def format_for_sk(problem, data, measure):
   """

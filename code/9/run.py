@@ -1,7 +1,7 @@
 from dtlz import DTLZ1, DTLZ3, DTLZ5, DTLZ7
 from gamodel import GAModel
 from ga import ga, generate_random_population
-from de2 import de
+from de import de
 from stats import rdivDemo
 import time
 
@@ -84,42 +84,42 @@ def runner():
                     print "NonOptimized HV:" + str(hv_non_optimized)
                     print best_can
                     print "Optimzed HV:" + str(hv_optimized)
-                    # for optimizer in [ga]:  # , mws, de]:
+                    for optimizer in [ga]:  # , mws, de]:
 
-                    #     hv = optimizer(model_instance, population_size=era_size, num_generations=1000, initial_pop = era0)
-                    #     flag = False
-                    #     for model_hvs in all_eras:
-                    #         if model_hvs[0] == model_id:
-                    #             model_hvs += [hv]
-                    #             flag = True
+                        hv = optimizer(model_instance, population_size=era_size, num_generations=1000, initial_pop = era0)
+                        flag = False
+                        for model_hvs in all_eras:
+                            if model_hvs[0] == model_id:
+                                model_hvs += [hv]
+                                flag = True
 
-                    #     if not flag:
-                    #         curr_model_hv = [model_id, hv]
-                    #         all_eras += [curr_model_hv]
-                        # print "\n*****************************"
-                        # print optimizer.__name__ + "(" + model.__name__ + ")"
-                        # era_scores = [model_instance.aggregate(x) for x in last_era]
-                        # era_score = [0 for _ in range(len(last_era[0]))]
-                        # for can_num in range(len(era_score)):
-                        #     for obj_num in range(len(last_era)):
-                        #         # print obj_num, can_num
-                        #         era_score[can_num] += last_era[obj_num][can_num]
-                        #         # if(model.__name__ == "DTLZ7" and num_objs==2 and num_decs==10):
-                        #         #     # print last_era[obj_num][can_num]
-                        #         #     print len(last_era)
+                        if not flag:
+                            curr_model_hv = [model_id, hv]
+                            all_eras += [curr_model_hv]
+                        print "\n*****************************"
+                        print optimizer.__name__ + "(" + model.__name__ + ")"
+                        era_scores = [model_instance.aggregate(x) for x in last_era]
+                        era_score = [0 for _ in range(len(last_era[0]))]
+                        for can_num in range(len(era_score)):
+                            for obj_num in range(len(last_era)):
+                                # print obj_num, can_num
+                                era_score[can_num] += last_era[obj_num][can_num]
+                                # if(model.__name__ == "DTLZ7" and num_objs==2 and num_decs==10):
+                                #     # print last_era[obj_num][can_num]
+                                #     print len(last_era)
 
-                        # era_score.insert(0, model.__name__ + "[" + str(num_objs) + "," + str(num_decs)+"]")
-                        # print era_score
-                        # all_eras.append(era_score)
-                        # print "*****************************\n"
-                # print "Done for obj:" + str(num_objs)
-                # print all_eras
-    #     print "Iteration " + str(num) + " done!"
-    # rdivDemo(all_eras)
-    # with open('output_hv.txt', 'w') as f:
-    #     for model in all_eras:
-    #         for val in model:
-    #             f.write(str(val) + ",")
-    #         f.write("\n")
+                        era_score.insert(0, model.__name__ + "[" + str(num_objs) + "," + str(num_decs)+"]")
+                        print era_score
+                        all_eras.append(era_score)
+                        print "*****************************\n"
+                print "Done for obj:" + str(num_objs)
+                print all_eras
+        print "Iteration " + str(num) + " done!"
+    rdivDemo(all_eras)
+    with open('output_hv.txt', 'w') as f:
+        for model in all_eras:
+            for val in model:
+                f.write(str(val) + ",")
+            f.write("\n")
 
 runner()
