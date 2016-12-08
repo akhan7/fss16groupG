@@ -76,20 +76,22 @@ The cumulative result across all the models and objectives is also shown:
 ### Conclusions
 * From the results it is clear that CDOM has proved to be a better fitness evaluator as compared to BDOM. 
 * The mechanism of raising to an exponent displayed by CDOM has shown it's "shouting" capabilities where there is a stark contrast between CDOM results. 
-* BDOM shows little variations in the results which proves why it is not a good idea to use it.  
+* BDOM shows little variations in the results which proves why it is not a good idea to use it.
+* Run time of the code depends on the number of generations- more the number of generations, more exponential the rise in code runtime.
 
 
 ### Threats to Validity 
-  1. To ensure the code running, we had to tweak and change the number of generations as well as the number of candidates. Based on these values the results were obtained above, which should be avoided.
-  2. Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
-  3. Binary domination may not always work as well as we expect it to. Consider a not-so-common scenario where no candidate binary-dominates another candidate in the population. In such cases, how do we determine who the fittest individuals are?
-  4. As discussed earlier, we use the hypervolume as a metric of "goodness" of the best pareto frontier found. While this seems to be a promising approach, there is still much debate and ongoing research in this area.
+ 1. To ensure the code running, we had to tweak and change the number of generations as well as the number of candidates. Based on these values the results were obtained above, which should be avoided.
+ 2. Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
+ 3. Binary domination may not always work as well as we expect it to. Consider a not-so-common scenario where no candidate binary-dominates another candidate in the population. In such cases, how do we determine who the fittest individuals are?
+ 4. As discussed earlier, we use the hypervolume as a metric of "goodness" of the best pareto frontier found. While this seems to be a promising approach, there is still much debate and ongoing research in this area.
 
 
 ### Future Work
-  1.  We could generate multiple instances of the default values and generate the graphs for those and then decide which set of values work the best.
-  2.  We could use other performance measures apart from hypervolume such as spread or IQR as well as the time for which the code runs and then do a comprehensive analysis between GA and NSGA-II.
-  3.  We could use test the algorithm with other models and see how the performance of the algorithm changes with different models.
+ 1. We have evaluated NSGA-II in a vacuum. Comparing the results of NSGA-II with GA (it's predeccesor) as well as with NPGA and MOGA should give very interesting results. This will truly be a good test to evaluate the strengths and weaknesses of these evolutionary algorithms and also enable us to see their behavior when tested with different models and objective and decision spaces.
+ 2. We could generate multiple instances of the default values and generate the graphs for those and then decide which set of values work the best.
+ 3.  We could use other performance measures apart from hypervolume such as spread or intergenerational distance as well as the time for which the code runs and then do a comprehensive analysis between GA and NSGA-II.
+ 4.  We could use test the algorithm with other models and see how the performance of the algorithm changes with different models.
 
 
 ###References:-
