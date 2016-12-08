@@ -106,6 +106,12 @@ Comparing the tuned vs untuned GA, the hypervolume for the tuned GA is higher th
 
 ![DTLZ 7 Comparison](https://github.com/akhan7/fss16groupG/blob/master/code/9/image/e4.jpeg)
 
+### Conclusion
+* This experiment has enlightened us more about Genetic Algorithm and Differential Evolution as well as different topics around them. 
+* Thus, from our experiments, we conclude that Differential Evolution does improve the performance of a Genetic Algorithm. 
+* We also observed that generally if the objective space is less, the hypervolume is more.
+
+
 ### Threats to validity
 1. The pareto frontier in this experiment uses a lot of time, resulting in increased time complexity.
 2. The BDOM, used in the experiment, might not be that effective for every kind of data.
@@ -118,10 +124,5 @@ Comparing the tuned vs untuned GA, the hypervolume for the tuned GA is higher th
 4. Also we intend to improve the results by using CDOM instead of BDOM and by performing more experiments. 
 
 
-### Conclusion
-* This experiment has enlightened us more about Genetic Algorithm and Differential Evolution as well as different topics around them. 
-* Thus, from our experiments, we conclude that Differential Evolution does improve the performance of a Genetic Algorithm. 
-* We also observed that generally if the objective space is less, the hypervolume is more.
-
-### References
+[1]### References
 [https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html](https://www.doc.ic.ac.uk/~nd/surprise_96/journal/vol1/hmw/article1.html)
