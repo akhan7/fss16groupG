@@ -133,7 +133,7 @@ rank ,         name ,    med   ,  iqr
 ```
 
 
-Inference:
+### Inference
 DE has a better rank compared to SA and MWS. DE has a better performance and it has lesser IQR than the other 2 which means
 that the solutions it produced were very consistent and didn't vary do much. This is because it maintains a very good set of solutions during
 each iteration whereas both MWS and SA maintain only their best solution. So even through they terminate early the quality
@@ -154,6 +154,9 @@ This shows that the quality of the solution doesn't change too much after termin
 It took nearly 7.13 seconds to complete with bootstrapping methods on and 5.92 seconds when turned off.
 But we need to try it for huge populations and more number of objectives to see if there is considerable difference or not.
 
+### Conclusion
+* Thus we conclude that, simulated annealing makes a lot of random jumps in the beginning and the probability of it making random jumps lessens as it cools down. 
+* We also observe that DE always maintains a frontier of best solutions. 
 
 ### Threats to Validity
 1. The early termination results are valid only for the case when the optimizers use the 
