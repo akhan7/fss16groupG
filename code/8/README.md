@@ -41,23 +41,43 @@ We carry this study forward by evaluating the performance of this non dominated 
 ###Implementation 
   We implemeted the NSGA-II Algorithm on DTLZ 1 , 3, 5 , 7 each time with 2,4,6,8 objectives and 10, 20 , 40 decisions. 
   The default values of Genetic Algorithm have been used:
-  
     * Probabilty for mutation: 0.05 
     * Probabilty for crossover: 1
     * Number of candidates: 100 
     * Number of generations: 10
 
 ###Results
-  
+  Across all DTLZ models the scores between binary domination and continuous domination are fairly similar. The hyper-volume averages below have been normalized by dividing each hyper-volume by the number of objectives that were tested as the hypervolume would grow with an increased number of objectives. Even after normalized, most of the hyper-volume scores were better for higher number of objectives.
+
+#### DTLZ 1
+As seen in the results below, with increase in objectives there's not any difference in the hypervolume, even after normalizing across objectives. For this problem set the number of decisions does not play a significant role in the difference of scores.
+
+![DTLZ 1 Results](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/r1.png)
+
+#### DTLZ 3
+As seen in the results below, with increase in objectives there's not any difference in the hypervolume, even after normalizing across objectives. For this problem set the number of decisions does not play a significant role in the difference of scores. 
+
+![DTLZ 3 Results](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/r2.png)
+
+#### DTLZ 5
+As seen in the results below, there is a variation in the hypervolume. CDOM results show much more variation as compared to BDOM which is indicative of it being a better fitness evaluation criteria.
+
+![DTLZ 5 Results](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/r3.png)
+
+#### DTLZ 7
+As seen in the results below, there is a variation in the hypervolume. CDOM results show much more variation as compared to BDOM which is indicative of it being a better fitness evaluation criteria.
+
+![DTLZ 7 Results](https://github.com/akhan7/fss16groupG/blob/master/code/8/image/r4.png)
 
 
 ###Conclusions
 
 
 ###Threats to Validity 
-  1.  Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
-  2.  Binary domination may not always work as well as we expect it to. Consider a not-so-common scenario where no candidate binary-dominates another candidate in the population. In such cases, how do we determine who the fittest individuals are?
-  3.  As discussed earlier, we use the hypervolume as a metric of "goodness" of the best pareto frontier found. While this seems to be a promising approach, there is still much debate and ongoing research in this area.
+  1. To ensure the code running, we had to tweak and change the number of generations as well as the number of candidates. Based on these values the results were obtained above, which should be avoided.
+  2. Only the default GA values were used for NSGA-II implementation. In this project we can improve the results by optimizing the parameters for GA.
+  3. Binary domination may not always work as well as we expect it to. Consider a not-so-common scenario where no candidate binary-dominates another candidate in the population. In such cases, how do we determine who the fittest individuals are?
+  4. As discussed earlier, we use the hypervolume as a metric of "goodness" of the best pareto frontier found. While this seems to be a promising approach, there is still much debate and ongoing research in this area.
 
 
 ###Future Work
