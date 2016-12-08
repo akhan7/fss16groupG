@@ -113,6 +113,10 @@ Comparing the tuned vs untuned GA, the hypervolume for the tuned GA is higher th
 
 ![DTLZ 7 Comparison](https://github.com/akhan7/fss16groupG/blob/master/code/9/image/e4.jpeg)
 
+**One of the issues we faced was the runtime of the algorithm. As the number of objectives 
+increased, the number of computations also increased dramatically. This comes as no surprise because
+as more and more contradicting objectives are added, the hypervolume decreases and during creating a random candidate / mutated candidate,
+the algorithm won't be able to find a valid candidate in the first place and won't be able to move forward **
 ### Conclusion
 * This experiment has enlightened us more about Genetic Algorithm and Differential Evolution as well as different topics around them. 
 * Thus, from our experiments, we conclude that Differential Evolution does improve the performance of a Genetic Algorithm. 
